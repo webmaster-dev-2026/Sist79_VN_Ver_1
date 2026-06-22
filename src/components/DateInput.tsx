@@ -1,5 +1,6 @@
 import React from 'react';
-import { Delete } from 'lucide-react';
+import { Delete, Calendar } from 'lucide-react';
+import { BRAND } from '../theme/brand';
 
 interface DateInputProps {
   value: string;
@@ -7,11 +8,7 @@ interface DateInputProps {
 }
 
 const keyStyle: React.CSSProperties = {
-  display: 'flex', alignItems: 'center', justifyContent: 'center',
-  background: 'white', border: '2px solid #ccfbf1', borderRadius: '12px',
-  fontWeight: 700, color: '#134e4a', cursor: 'pointer',
-  fontSize: '22px', height: '64px', fontFamily: 'inherit',
-  boxShadow: '0 2px 4px rgba(0,0,0,0.06)',
+  fontSize: '22px', height: '64px',
 };
 
 export default function DateInput({ value, onChange }: DateInputProps) {
@@ -29,23 +26,31 @@ export default function DateInput({ value, onChange }: DateInputProps) {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', width: '100%', maxWidth: '300px' }}>
-      <div style={{ width: '100%', background: '#f0fdfa', border: '2px solid #99f6e4', borderRadius: '16px', padding: '16px 24px', textAlign: 'center' }}>
-        <span style={{ fontSize: '32px', fontWeight: 700, color: formatted() ? '#134e4a' : '#99f6e4', fontVariantNumeric: 'tabular-nums', letterSpacing: '4px' }}>
-          {formatted() || 'JJ/MM/AAAA'}
-        </span>
+      <div className="kiosk-field kiosk-field--active" style={{ width: '100%', cursor: 'default', padding: '16px 20px' }}>
+        <div className="kiosk-field-row">
+          <span className="kiosk-field-value kiosk-field-value--compact" style={{
+            flex: 1,
+            color: formatted() ? BRAND.navy : BRAND.placeholder,
+          }}>
+            {formatted() || 'JJ/MM/AAAA'}
+          </span>
+          <div className="liquid-glass-icon kiosk-field-icon">
+            <Calendar size={22} strokeWidth={1.75} color={BRAND.blue} />
+          </div>
+        </div>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', width: '100%' }}>
         {['7','8','9','4','5','6','1','2','3'].map(d => (
-          <button key={d} onPointerDown={(e) => { e.preventDefault(); press(d); }} style={keyStyle}>{d}</button>
+          <button key={d} type="button" className="kiosk-key" onPointerDown={(e) => { e.preventDefault(); press(d); }} style={keyStyle}>{d}</button>
         ))}
         <div />
-        <button onPointerDown={(e) => { e.preventDefault(); press('0'); }} style={keyStyle}>0</button>
+        <button type="button" className="kiosk-key" onPointerDown={(e) => { e.preventDefault(); press('0'); }} style={keyStyle}>0</button>
         <div />
       </div>
 
-      <button onPointerDown={(e) => { e.preventDefault(); backspace(); }}
-        style={{ ...keyStyle, width: '140px', height: '50px', color: '#0d9488', gap: '8px', fontSize: '15px' }}>
+      <button type="button" className="kiosk-key" onPointerDown={(e) => { e.preventDefault(); backspace(); }}
+        style={{ ...keyStyle, width: '140px', height: '50px', color: BRAND.blue, gap: '8px', fontSize: '15px', display: 'flex' }}>
         <Delete size={18} /> Effacer
       </button>
     </div>

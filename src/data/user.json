@@ -1,0 +1,2104 @@
+{
+  "users": [
+    {
+      "id": "USER-001",
+      "lastName": "BERNARD",
+      "firstName": "Isabelle",
+      "fullName": "Isabelle BERNARD",
+      "birthDate": "14/02/1968",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Isabelle%20BERNARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-001",
+      "appointments": [
+        {
+          "id": "APT-001-1",
+          "time": "14h00",
+          "date": "30/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Psychologie",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-002",
+      "lastName": "RICHARD",
+      "firstName": "Thomas",
+      "fullName": "Thomas RICHARD",
+      "birthDate": "27/03/1981",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Thomas%20RICHARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-002",
+      "appointments": [
+        {
+          "id": "APT-002-1",
+          "time": "09h30",
+          "date": "26/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Rhumatologie",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-003",
+      "lastName": "MOREAU",
+      "firstName": "Sandrine",
+      "fullName": "Sandrine MOREAU",
+      "birthDate": "12/04/1994",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Sandrine%20MOREAU&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-003",
+      "appointments": [
+        {
+          "id": "APT-003",
+          "time": "16h00",
+          "date": "22/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Dermatologie",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-004",
+      "lastName": "MICHEL",
+      "firstName": "Julien",
+      "fullName": "Julien MICHEL",
+      "birthDate": "25/05/1962",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Julien%20MICHEL&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-004",
+      "appointments": [
+        {
+          "id": "APT-004-1",
+          "time": "11h30",
+          "date": "02/07/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Visite de reprise",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-005",
+      "lastName": "BERTRAND",
+      "firstName": "Claire",
+      "fullName": "Claire BERTRAND",
+      "birthDate": "10/06/1975",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Claire%20BERTRAND&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-005",
+      "appointments": [
+        {
+          "id": "APT-005-1",
+          "time": "08h30",
+          "date": "28/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "Gastro-entérologie",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-006",
+      "lastName": "FOURNIER",
+      "firstName": "Laurent",
+      "fullName": "Laurent FOURNIER",
+      "birthDate": "23/07/1988",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Laurent%20FOURNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-006",
+      "appointments": [
+        {
+          "id": "APT-006",
+          "time": "15h00",
+          "date": "24/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Gynécologie",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-007",
+      "lastName": "ANDRE",
+      "firstName": "Valérie",
+      "fullName": "Valérie ANDRE",
+      "birthDate": "08/08/1956",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Val%C3%A9rie%20ANDRE&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-007",
+      "appointments": [
+        {
+          "id": "APT-007-1",
+          "time": "10h30",
+          "date": "20/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Ophtalmologie",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-008",
+      "lastName": "BLANC",
+      "firstName": "Christophe",
+      "fullName": "Christophe BLANC",
+      "birthDate": "21/09/1969",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Christophe%20BLANC&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-008",
+      "appointments": [
+        {
+          "id": "APT-008-1",
+          "time": "07h30",
+          "date": "30/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Visite d'information et de prévention",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-009",
+      "lastName": "GARNIER",
+      "firstName": "Sophie",
+      "fullName": "Sophie GARNIER",
+      "birthDate": "06/10/1982",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Sophie%20GARNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-009",
+      "appointments": [
+        {
+          "id": "APT-009",
+          "time": "14h00",
+          "date": "26/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Pneumologie",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-010",
+      "lastName": "DUPONT",
+      "firstName": "François",
+      "fullName": "François DUPONT",
+      "birthDate": "19/11/1995",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Fran%C3%A7ois%20DUPONT&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-010",
+      "appointments": [
+        {
+          "id": "APT-010-1",
+          "time": "09h30",
+          "date": "22/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Pédiatrie",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-011",
+      "lastName": "BERNARD",
+      "firstName": "Nathalie",
+      "fullName": "Nathalie BERNARD",
+      "birthDate": "04/12/1963",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Nathalie%20BERNARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-011",
+      "appointments": [
+        {
+          "id": "APT-011-1",
+          "time": "16h00",
+          "date": "02/07/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "ORL",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-012",
+      "lastName": "RICHARD",
+      "firstName": "Stéphane",
+      "fullName": "Stéphane RICHARD",
+      "birthDate": "17/01/1976",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=St%C3%A9phane%20RICHARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-012",
+      "appointments": [
+        {
+          "id": "APT-012",
+          "time": "11h30",
+          "date": "28/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Cardiologie",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-013",
+      "lastName": "MOREAU",
+      "firstName": "Marie",
+      "fullName": "Marie MOREAU",
+      "birthDate": "02/02/1989",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Marie%20MOREAU&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-013",
+      "appointments": [
+        {
+          "id": "APT-013-1",
+          "time": "08h30",
+          "date": "24/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Médecine du travail",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-014",
+      "lastName": "MICHEL",
+      "firstName": "Nicolas",
+      "fullName": "Nicolas MICHEL",
+      "birthDate": "15/03/1957",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Nicolas%20MICHEL&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-014",
+      "appointments": [
+        {
+          "id": "APT-014-1",
+          "time": "15h00",
+          "date": "20/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Psychologie",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-015",
+      "lastName": "BERTRAND",
+      "firstName": "Émilie",
+      "fullName": "Émilie BERTRAND",
+      "birthDate": "28/04/1970",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=%C3%89milie%20BERTRAND&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-015",
+      "appointments": [
+        {
+          "id": "APT-015",
+          "time": "10h30",
+          "date": "30/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Rhumatologie",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-016",
+      "lastName": "FOURNIER",
+      "firstName": "Patrick",
+      "fullName": "Patrick FOURNIER",
+      "birthDate": "13/05/1983",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Patrick%20FOURNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-016",
+      "appointments": [
+        {
+          "id": "APT-016-1",
+          "time": "07h30",
+          "date": "26/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Dermatologie",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-017",
+      "lastName": "ANDRE",
+      "firstName": "Camille",
+      "fullName": "Camille ANDRE",
+      "birthDate": "26/06/1996",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Camille%20ANDRE&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-017",
+      "appointments": [
+        {
+          "id": "APT-017-1",
+          "time": "14h00",
+          "date": "22/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "Visite de reprise",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-018",
+      "lastName": "BLANC",
+      "firstName": "Philippe",
+      "fullName": "Philippe BLANC",
+      "birthDate": "11/07/1964",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Philippe%20BLANC&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-018",
+      "appointments": [
+        {
+          "id": "APT-018",
+          "time": "09h30",
+          "date": "02/07/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Gastro-entérologie",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-019",
+      "lastName": "GARNIER",
+      "firstName": "Julie",
+      "fullName": "Julie GARNIER",
+      "birthDate": "24/08/1977",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Julie%20GARNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-019",
+      "appointments": [
+        {
+          "id": "APT-019-1",
+          "time": "16h00",
+          "date": "28/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Gynécologie",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-020",
+      "lastName": "DUPONT",
+      "firstName": "Olivier",
+      "fullName": "Olivier DUPONT",
+      "birthDate": "09/09/1990",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Olivier%20DUPONT&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-020",
+      "appointments": [
+        {
+          "id": "APT-020-1",
+          "time": "11h30",
+          "date": "24/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Ophtalmologie",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-021",
+      "lastName": "BERNARD",
+      "firstName": "Hélène",
+      "fullName": "Hélène BERNARD",
+      "birthDate": "22/10/1958",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=H%C3%A9l%C3%A8ne%20BERNARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-021",
+      "appointments": [
+        {
+          "id": "APT-021",
+          "time": "08h30",
+          "date": "20/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Visite d'information et de prévention",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-022",
+      "lastName": "RICHARD",
+      "firstName": "Michel",
+      "fullName": "Michel RICHARD",
+      "birthDate": "07/11/1971",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Michel%20RICHARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-022",
+      "appointments": [
+        {
+          "id": "APT-022-1",
+          "time": "15h00",
+          "date": "30/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Pneumologie",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-023",
+      "lastName": "MOREAU",
+      "firstName": "Anne",
+      "fullName": "Anne MOREAU",
+      "birthDate": "20/12/1984",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Anne%20MOREAU&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-023",
+      "appointments": [
+        {
+          "id": "APT-023-1",
+          "time": "10h30",
+          "date": "26/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "Pédiatrie",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-024",
+      "lastName": "MICHEL",
+      "firstName": "Marc",
+      "fullName": "Marc MICHEL",
+      "birthDate": "05/01/1997",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Marc%20MICHEL&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-024",
+      "appointments": [
+        {
+          "id": "APT-024",
+          "time": "07h30",
+          "date": "22/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "ORL",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-025",
+      "lastName": "BERTRAND",
+      "firstName": "Aurélie",
+      "fullName": "Aurélie BERTRAND",
+      "birthDate": "18/02/1965",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Aur%C3%A9lie%20BERTRAND&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-025",
+      "appointments": [
+        {
+          "id": "APT-025-1",
+          "time": "14h00",
+          "date": "02/07/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Cardiologie",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-026",
+      "lastName": "FOURNIER",
+      "firstName": "Pierre",
+      "fullName": "Pierre FOURNIER",
+      "birthDate": "03/03/1978",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Pierre%20FOURNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-026",
+      "appointments": [
+        {
+          "id": "APT-026-1",
+          "time": "09h30",
+          "date": "28/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Médecine du travail",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-027",
+      "lastName": "ANDRE",
+      "firstName": "Catherine",
+      "fullName": "Catherine ANDRE",
+      "birthDate": "16/04/1991",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Catherine%20ANDRE&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-027",
+      "appointments": [
+        {
+          "id": "APT-027",
+          "time": "16h00",
+          "date": "24/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Psychologie",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-028",
+      "lastName": "BLANC",
+      "firstName": "David",
+      "fullName": "David BLANC",
+      "birthDate": "01/05/1959",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=David%20BLANC&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-028",
+      "appointments": [
+        {
+          "id": "APT-028-1",
+          "time": "11h30",
+          "date": "20/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Rhumatologie",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-029",
+      "lastName": "GARNIER",
+      "firstName": "Caroline",
+      "fullName": "Caroline GARNIER",
+      "birthDate": "14/06/1972",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Caroline%20GARNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-029",
+      "appointments": [
+        {
+          "id": "APT-029-1",
+          "time": "08h30",
+          "date": "30/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "Dermatologie",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-030",
+      "lastName": "DUPONT",
+      "firstName": "Jean",
+      "fullName": "Jean DUPONT",
+      "birthDate": "27/07/1985",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Jean%20DUPONT&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-030",
+      "appointments": [
+        {
+          "id": "APT-030",
+          "time": "15h00",
+          "date": "26/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Visite de reprise",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-031",
+      "lastName": "BERNARD",
+      "firstName": "Isabelle",
+      "fullName": "Isabelle BERNARD",
+      "birthDate": "12/08/1998",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Isabelle%20BERNARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-031",
+      "appointments": [
+        {
+          "id": "APT-031-1",
+          "time": "10h30",
+          "date": "22/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Gastro-entérologie",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-032",
+      "lastName": "RICHARD",
+      "firstName": "Thomas",
+      "fullName": "Thomas RICHARD",
+      "birthDate": "25/09/1966",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Thomas%20RICHARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-032",
+      "appointments": [
+        {
+          "id": "APT-032-1",
+          "time": "07h30",
+          "date": "02/07/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Gynécologie",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-033",
+      "lastName": "MOREAU",
+      "firstName": "Sandrine",
+      "fullName": "Sandrine MOREAU",
+      "birthDate": "10/10/1979",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Sandrine%20MOREAU&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-033",
+      "appointments": [
+        {
+          "id": "APT-033",
+          "time": "14h00",
+          "date": "28/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Ophtalmologie",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-034",
+      "lastName": "MICHEL",
+      "firstName": "Julien",
+      "fullName": "Julien MICHEL",
+      "birthDate": "23/11/1992",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Julien%20MICHEL&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-034",
+      "appointments": [
+        {
+          "id": "APT-034-1",
+          "time": "09h30",
+          "date": "24/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Visite d'information et de prévention",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-035",
+      "lastName": "BERTRAND",
+      "firstName": "Claire",
+      "fullName": "Claire BERTRAND",
+      "birthDate": "08/12/1960",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Claire%20BERTRAND&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-035",
+      "appointments": [
+        {
+          "id": "APT-035-1",
+          "time": "16h00",
+          "date": "20/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "Pneumologie",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-036",
+      "lastName": "FOURNIER",
+      "firstName": "Laurent",
+      "fullName": "Laurent FOURNIER",
+      "birthDate": "21/01/1973",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Laurent%20FOURNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-036",
+      "appointments": [
+        {
+          "id": "APT-036",
+          "time": "11h30",
+          "date": "30/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Pédiatrie",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-037",
+      "lastName": "ANDRE",
+      "firstName": "Valérie",
+      "fullName": "Valérie ANDRE",
+      "birthDate": "06/02/1986",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Val%C3%A9rie%20ANDRE&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-037",
+      "appointments": [
+        {
+          "id": "APT-037-1",
+          "time": "08h30",
+          "date": "26/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "ORL",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-038",
+      "lastName": "BLANC",
+      "firstName": "Christophe",
+      "fullName": "Christophe BLANC",
+      "birthDate": "19/03/1999",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Christophe%20BLANC&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-038",
+      "appointments": [
+        {
+          "id": "APT-038-1",
+          "time": "15h00",
+          "date": "22/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Cardiologie",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-039",
+      "lastName": "GARNIER",
+      "firstName": "Sophie",
+      "fullName": "Sophie GARNIER",
+      "birthDate": "04/04/1967",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Sophie%20GARNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-039",
+      "appointments": [
+        {
+          "id": "APT-039",
+          "time": "10h30",
+          "date": "02/07/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Médecine du travail",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-040",
+      "lastName": "DUPONT",
+      "firstName": "François",
+      "fullName": "François DUPONT",
+      "birthDate": "17/05/1980",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Fran%C3%A7ois%20DUPONT&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-040",
+      "appointments": [
+        {
+          "id": "APT-040-1",
+          "time": "07h30",
+          "date": "28/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Psychologie",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-041",
+      "lastName": "BERNARD",
+      "firstName": "Nathalie",
+      "fullName": "Nathalie BERNARD",
+      "birthDate": "02/06/1993",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Nathalie%20BERNARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-041",
+      "appointments": [
+        {
+          "id": "APT-041-1",
+          "time": "14h00",
+          "date": "24/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "Rhumatologie",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-042",
+      "lastName": "RICHARD",
+      "firstName": "Stéphane",
+      "fullName": "Stéphane RICHARD",
+      "birthDate": "15/07/1961",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=St%C3%A9phane%20RICHARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-042",
+      "appointments": [
+        {
+          "id": "APT-042",
+          "time": "09h30",
+          "date": "20/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Dermatologie",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-043",
+      "lastName": "MOREAU",
+      "firstName": "Marie",
+      "fullName": "Marie MOREAU",
+      "birthDate": "28/08/1974",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Marie%20MOREAU&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-043",
+      "appointments": [
+        {
+          "id": "APT-043-1",
+          "time": "16h00",
+          "date": "30/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Visite de reprise",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-044",
+      "lastName": "MICHEL",
+      "firstName": "Nicolas",
+      "fullName": "Nicolas MICHEL",
+      "birthDate": "13/09/1987",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Nicolas%20MICHEL&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-044",
+      "appointments": [
+        {
+          "id": "APT-044-1",
+          "time": "11h30",
+          "date": "26/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Gastro-entérologie",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-045",
+      "lastName": "BERTRAND",
+      "firstName": "Émilie",
+      "fullName": "Émilie BERTRAND",
+      "birthDate": "26/10/1955",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=%C3%89milie%20BERTRAND&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-045",
+      "appointments": [
+        {
+          "id": "APT-045",
+          "time": "08h30",
+          "date": "22/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Gynécologie",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-046",
+      "lastName": "FOURNIER",
+      "firstName": "Patrick",
+      "fullName": "Patrick FOURNIER",
+      "birthDate": "11/11/1968",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Patrick%20FOURNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-046",
+      "appointments": [
+        {
+          "id": "APT-046-1",
+          "time": "15h00",
+          "date": "02/07/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Ophtalmologie",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-047",
+      "lastName": "ANDRE",
+      "firstName": "Camille",
+      "fullName": "Camille ANDRE",
+      "birthDate": "24/12/1981",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Camille%20ANDRE&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-047",
+      "appointments": [
+        {
+          "id": "APT-047-1",
+          "time": "10h30",
+          "date": "28/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "Visite d'information et de prévention",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-048",
+      "lastName": "BLANC",
+      "firstName": "Philippe",
+      "fullName": "Philippe BLANC",
+      "birthDate": "09/01/1994",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Philippe%20BLANC&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-048",
+      "appointments": [
+        {
+          "id": "APT-048",
+          "time": "07h30",
+          "date": "24/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Pneumologie",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-049",
+      "lastName": "GARNIER",
+      "firstName": "Julie",
+      "fullName": "Julie GARNIER",
+      "birthDate": "22/02/1962",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Julie%20GARNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-049",
+      "appointments": [
+        {
+          "id": "APT-049-1",
+          "time": "14h00",
+          "date": "20/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Pédiatrie",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-050",
+      "lastName": "DUPONT",
+      "firstName": "Olivier",
+      "fullName": "Olivier DUPONT",
+      "birthDate": "07/03/1975",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Olivier%20DUPONT&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-050",
+      "appointments": [
+        {
+          "id": "APT-050-1",
+          "time": "09h30",
+          "date": "30/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "ORL",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-051",
+      "lastName": "BERNARD",
+      "firstName": "Hélène",
+      "fullName": "Hélène BERNARD",
+      "birthDate": "20/04/1988",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=H%C3%A9l%C3%A8ne%20BERNARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-051",
+      "appointments": [
+        {
+          "id": "APT-051",
+          "time": "16h00",
+          "date": "26/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Cardiologie",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-052",
+      "lastName": "RICHARD",
+      "firstName": "Michel",
+      "fullName": "Michel RICHARD",
+      "birthDate": "05/05/1956",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Michel%20RICHARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-052",
+      "appointments": [
+        {
+          "id": "APT-052-1",
+          "time": "11h30",
+          "date": "22/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Médecine du travail",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-053",
+      "lastName": "MOREAU",
+      "firstName": "Anne",
+      "fullName": "Anne MOREAU",
+      "birthDate": "18/06/1969",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Anne%20MOREAU&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-053",
+      "appointments": [
+        {
+          "id": "APT-053-1",
+          "time": "08h30",
+          "date": "02/07/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "Psychologie",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-054",
+      "lastName": "MICHEL",
+      "firstName": "Marc",
+      "fullName": "Marc MICHEL",
+      "birthDate": "03/07/1982",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Marc%20MICHEL&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-054",
+      "appointments": [
+        {
+          "id": "APT-054",
+          "time": "15h00",
+          "date": "28/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Rhumatologie",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-055",
+      "lastName": "BERTRAND",
+      "firstName": "Aurélie",
+      "fullName": "Aurélie BERTRAND",
+      "birthDate": "16/08/1995",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Aur%C3%A9lie%20BERTRAND&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-055",
+      "appointments": [
+        {
+          "id": "APT-055-1",
+          "time": "10h30",
+          "date": "24/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Dermatologie",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-056",
+      "lastName": "FOURNIER",
+      "firstName": "Pierre",
+      "fullName": "Pierre FOURNIER",
+      "birthDate": "01/09/1963",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Pierre%20FOURNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-056",
+      "appointments": [
+        {
+          "id": "APT-056-1",
+          "time": "07h30",
+          "date": "20/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Visite de reprise",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-057",
+      "lastName": "ANDRE",
+      "firstName": "Catherine",
+      "fullName": "Catherine ANDRE",
+      "birthDate": "14/10/1976",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Catherine%20ANDRE&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-057",
+      "appointments": [
+        {
+          "id": "APT-057",
+          "time": "14h00",
+          "date": "30/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Gastro-entérologie",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-058",
+      "lastName": "BLANC",
+      "firstName": "David",
+      "fullName": "David BLANC",
+      "birthDate": "27/11/1989",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=David%20BLANC&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-058",
+      "appointments": [
+        {
+          "id": "APT-058-1",
+          "time": "09h30",
+          "date": "26/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Gynécologie",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-059",
+      "lastName": "GARNIER",
+      "firstName": "Caroline",
+      "fullName": "Caroline GARNIER",
+      "birthDate": "12/12/1957",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Caroline%20GARNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-059",
+      "appointments": [
+        {
+          "id": "APT-059-1",
+          "time": "16h00",
+          "date": "22/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "Ophtalmologie",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-060",
+      "lastName": "DUPONT",
+      "firstName": "Jean",
+      "fullName": "Jean DUPONT",
+      "birthDate": "25/01/1970",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Jean%20DUPONT&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-060",
+      "appointments": [
+        {
+          "id": "APT-060",
+          "time": "11h30",
+          "date": "02/07/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Visite d'information et de prévention",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-061",
+      "lastName": "BERNARD",
+      "firstName": "Isabelle",
+      "fullName": "Isabelle BERNARD",
+      "birthDate": "10/02/1983",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Isabelle%20BERNARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-061",
+      "appointments": [
+        {
+          "id": "APT-061-1",
+          "time": "08h30",
+          "date": "28/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Pneumologie",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-062",
+      "lastName": "RICHARD",
+      "firstName": "Thomas",
+      "fullName": "Thomas RICHARD",
+      "birthDate": "23/03/1996",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Thomas%20RICHARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-062",
+      "appointments": [
+        {
+          "id": "APT-062-1",
+          "time": "15h00",
+          "date": "24/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Pédiatrie",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-063",
+      "lastName": "MOREAU",
+      "firstName": "Sandrine",
+      "fullName": "Sandrine MOREAU",
+      "birthDate": "08/04/1964",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Sandrine%20MOREAU&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-063",
+      "appointments": [
+        {
+          "id": "APT-063",
+          "time": "10h30",
+          "date": "20/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "ORL",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-064",
+      "lastName": "MICHEL",
+      "firstName": "Julien",
+      "fullName": "Julien MICHEL",
+      "birthDate": "21/05/1977",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Julien%20MICHEL&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-064",
+      "appointments": [
+        {
+          "id": "APT-064-1",
+          "time": "07h30",
+          "date": "30/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Cardiologie",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-065",
+      "lastName": "BERTRAND",
+      "firstName": "Claire",
+      "fullName": "Claire BERTRAND",
+      "birthDate": "06/06/1990",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Claire%20BERTRAND&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-065",
+      "appointments": [
+        {
+          "id": "APT-065-1",
+          "time": "14h00",
+          "date": "26/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "Médecine du travail",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-066",
+      "lastName": "FOURNIER",
+      "firstName": "Laurent",
+      "fullName": "Laurent FOURNIER",
+      "birthDate": "19/07/1958",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Laurent%20FOURNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-066",
+      "appointments": [
+        {
+          "id": "APT-066",
+          "time": "09h30",
+          "date": "22/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Psychologie",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-067",
+      "lastName": "ANDRE",
+      "firstName": "Valérie",
+      "fullName": "Valérie ANDRE",
+      "birthDate": "04/08/1971",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Val%C3%A9rie%20ANDRE&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-067",
+      "appointments": [
+        {
+          "id": "APT-067-1",
+          "time": "16h00",
+          "date": "02/07/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Rhumatologie",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-068",
+      "lastName": "BLANC",
+      "firstName": "Christophe",
+      "fullName": "Christophe BLANC",
+      "birthDate": "17/09/1984",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Christophe%20BLANC&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-068",
+      "appointments": [
+        {
+          "id": "APT-068-1",
+          "time": "11h30",
+          "date": "28/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Dermatologie",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-069",
+      "lastName": "GARNIER",
+      "firstName": "Sophie",
+      "fullName": "Sophie GARNIER",
+      "birthDate": "02/10/1997",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Sophie%20GARNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-069",
+      "appointments": [
+        {
+          "id": "APT-069",
+          "time": "08h30",
+          "date": "24/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Visite de reprise",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-070",
+      "lastName": "DUPONT",
+      "firstName": "François",
+      "fullName": "François DUPONT",
+      "birthDate": "15/11/1965",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Fran%C3%A7ois%20DUPONT&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-070",
+      "appointments": [
+        {
+          "id": "APT-070-1",
+          "time": "15h00",
+          "date": "20/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Gastro-entérologie",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-071",
+      "lastName": "BERNARD",
+      "firstName": "Nathalie",
+      "fullName": "Nathalie BERNARD",
+      "birthDate": "28/12/1978",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Nathalie%20BERNARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-071",
+      "appointments": [
+        {
+          "id": "APT-071-1",
+          "time": "10h30",
+          "date": "30/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "Gynécologie",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-072",
+      "lastName": "RICHARD",
+      "firstName": "Stéphane",
+      "fullName": "Stéphane RICHARD",
+      "birthDate": "13/01/1991",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=St%C3%A9phane%20RICHARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-072",
+      "appointments": [
+        {
+          "id": "APT-072",
+          "time": "07h30",
+          "date": "26/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Ophtalmologie",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-073",
+      "lastName": "MOREAU",
+      "firstName": "Marie",
+      "fullName": "Marie MOREAU",
+      "birthDate": "26/02/1959",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Marie%20MOREAU&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-073",
+      "appointments": [
+        {
+          "id": "APT-073-1",
+          "time": "14h00",
+          "date": "22/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Visite d'information et de prévention",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-074",
+      "lastName": "MICHEL",
+      "firstName": "Nicolas",
+      "fullName": "Nicolas MICHEL",
+      "birthDate": "11/03/1972",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Nicolas%20MICHEL&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-074",
+      "appointments": [
+        {
+          "id": "APT-074-1",
+          "time": "09h30",
+          "date": "02/07/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Pneumologie",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-075",
+      "lastName": "BERTRAND",
+      "firstName": "Émilie",
+      "fullName": "Émilie BERTRAND",
+      "birthDate": "24/04/1985",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=%C3%89milie%20BERTRAND&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-075",
+      "appointments": [
+        {
+          "id": "APT-075",
+          "time": "16h00",
+          "date": "28/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Pédiatrie",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-076",
+      "lastName": "FOURNIER",
+      "firstName": "Patrick",
+      "fullName": "Patrick FOURNIER",
+      "birthDate": "09/05/1998",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Patrick%20FOURNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-076",
+      "appointments": [
+        {
+          "id": "APT-076-1",
+          "time": "11h30",
+          "date": "24/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "ORL",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-077",
+      "lastName": "ANDRE",
+      "firstName": "Camille",
+      "fullName": "Camille ANDRE",
+      "birthDate": "22/06/1966",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Camille%20ANDRE&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-077",
+      "appointments": [
+        {
+          "id": "APT-077-1",
+          "time": "08h30",
+          "date": "20/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "Cardiologie",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-078",
+      "lastName": "BLANC",
+      "firstName": "Philippe",
+      "fullName": "Philippe BLANC",
+      "birthDate": "07/07/1979",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Philippe%20BLANC&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-078",
+      "appointments": [
+        {
+          "id": "APT-078",
+          "time": "15h00",
+          "date": "30/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Médecine du travail",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-079",
+      "lastName": "GARNIER",
+      "firstName": "Julie",
+      "fullName": "Julie GARNIER",
+      "birthDate": "20/08/1992",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Julie%20GARNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-079",
+      "appointments": [
+        {
+          "id": "APT-079-1",
+          "time": "10h30",
+          "date": "26/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Psychologie",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-080",
+      "lastName": "DUPONT",
+      "firstName": "Olivier",
+      "fullName": "Olivier DUPONT",
+      "birthDate": "05/09/1960",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Olivier%20DUPONT&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-080",
+      "appointments": [
+        {
+          "id": "APT-080-1",
+          "time": "07h30",
+          "date": "22/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Rhumatologie",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-081",
+      "lastName": "BERNARD",
+      "firstName": "Hélène",
+      "fullName": "Hélène BERNARD",
+      "birthDate": "18/10/1973",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=H%C3%A9l%C3%A8ne%20BERNARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-081",
+      "appointments": [
+        {
+          "id": "APT-081",
+          "time": "14h00",
+          "date": "02/07/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Dermatologie",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-082",
+      "lastName": "RICHARD",
+      "firstName": "Michel",
+      "fullName": "Michel RICHARD",
+      "birthDate": "03/11/1986",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Michel%20RICHARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-082",
+      "appointments": [
+        {
+          "id": "APT-082-1",
+          "time": "09h30",
+          "date": "28/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Visite de reprise",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-083",
+      "lastName": "MOREAU",
+      "firstName": "Anne",
+      "fullName": "Anne MOREAU",
+      "birthDate": "16/12/1999",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Anne%20MOREAU&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-083",
+      "appointments": [
+        {
+          "id": "APT-083-1",
+          "time": "16h00",
+          "date": "24/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "Gastro-entérologie",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-084",
+      "lastName": "MICHEL",
+      "firstName": "Marc",
+      "fullName": "Marc MICHEL",
+      "birthDate": "01/01/1967",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Marc%20MICHEL&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-084",
+      "appointments": [
+        {
+          "id": "APT-084",
+          "time": "11h30",
+          "date": "20/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Gynécologie",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-085",
+      "lastName": "BERTRAND",
+      "firstName": "Aurélie",
+      "fullName": "Aurélie BERTRAND",
+      "birthDate": "14/02/1980",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Aur%C3%A9lie%20BERTRAND&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-085",
+      "appointments": [
+        {
+          "id": "APT-085-1",
+          "time": "08h30",
+          "date": "30/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Ophtalmologie",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-086",
+      "lastName": "FOURNIER",
+      "firstName": "Pierre",
+      "fullName": "Pierre FOURNIER",
+      "birthDate": "27/03/1993",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Pierre%20FOURNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-086",
+      "appointments": [
+        {
+          "id": "APT-086-1",
+          "time": "15h00",
+          "date": "26/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Visite d'information et de prévention",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-087",
+      "lastName": "ANDRE",
+      "firstName": "Catherine",
+      "fullName": "Catherine ANDRE",
+      "birthDate": "12/04/1961",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Catherine%20ANDRE&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-087",
+      "appointments": [
+        {
+          "id": "APT-087",
+          "time": "10h30",
+          "date": "22/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Pneumologie",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-088",
+      "lastName": "BLANC",
+      "firstName": "David",
+      "fullName": "David BLANC",
+      "birthDate": "25/05/1974",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=David%20BLANC&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-088",
+      "appointments": [
+        {
+          "id": "APT-088-1",
+          "time": "07h30",
+          "date": "02/07/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Pédiatrie",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-089",
+      "lastName": "GARNIER",
+      "firstName": "Caroline",
+      "fullName": "Caroline GARNIER",
+      "birthDate": "10/06/1987",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Caroline%20GARNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-089",
+      "appointments": [
+        {
+          "id": "APT-089-1",
+          "time": "14h00",
+          "date": "28/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "ORL",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-090",
+      "lastName": "DUPONT",
+      "firstName": "Jean",
+      "fullName": "Jean DUPONT",
+      "birthDate": "23/07/1955",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Jean%20DUPONT&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-090",
+      "appointments": [
+        {
+          "id": "APT-090",
+          "time": "09h30",
+          "date": "24/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Cardiologie",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-091",
+      "lastName": "BERNARD",
+      "firstName": "Isabelle",
+      "fullName": "Isabelle BERNARD",
+      "birthDate": "08/08/1968",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Isabelle%20BERNARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-091",
+      "appointments": [
+        {
+          "id": "APT-091-1",
+          "time": "16h00",
+          "date": "20/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Médecine du travail",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-092",
+      "lastName": "RICHARD",
+      "firstName": "Thomas",
+      "fullName": "Thomas RICHARD",
+      "birthDate": "21/09/1981",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Thomas%20RICHARD&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-092",
+      "appointments": [
+        {
+          "id": "APT-092-1",
+          "time": "11h30",
+          "date": "30/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Psychologie",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-093",
+      "lastName": "MOREAU",
+      "firstName": "Sandrine",
+      "fullName": "Sandrine MOREAU",
+      "birthDate": "06/10/1994",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Sandrine%20MOREAU&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-093",
+      "appointments": [
+        {
+          "id": "APT-093",
+          "time": "08h30",
+          "date": "26/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Rhumatologie",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-094",
+      "lastName": "MICHEL",
+      "firstName": "Julien",
+      "fullName": "Julien MICHEL",
+      "birthDate": "19/11/1962",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Julien%20MICHEL&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-094",
+      "appointments": [
+        {
+          "id": "APT-094-1",
+          "time": "15h00",
+          "date": "22/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Dermatologie",
+          "doctor": "Dr Petit"
+        }
+      ]
+    },
+    {
+      "id": "USER-095",
+      "lastName": "BERTRAND",
+      "firstName": "Claire",
+      "fullName": "Claire BERTRAND",
+      "birthDate": "04/12/1975",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Claire%20BERTRAND&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-095",
+      "appointments": [
+        {
+          "id": "APT-095-1",
+          "time": "10h30",
+          "date": "02/07/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 3",
+          "specialty": "Visite de reprise",
+          "doctor": "Dr Fontaine"
+        }
+      ]
+    },
+    {
+      "id": "USER-096",
+      "lastName": "FOURNIER",
+      "firstName": "Laurent",
+      "fullName": "Laurent FOURNIER",
+      "birthDate": "17/01/1988",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Laurent%20FOURNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-096",
+      "appointments": [
+        {
+          "id": "APT-096",
+          "time": "07h30",
+          "date": "28/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 1",
+          "specialty": "Gastro-entérologie",
+          "doctor": "Dr Martin"
+        }
+      ]
+    },
+    {
+      "id": "USER-097",
+      "lastName": "ANDRE",
+      "firstName": "Valérie",
+      "fullName": "Valérie ANDRE",
+      "birthDate": "02/02/1956",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Val%C3%A9rie%20ANDRE&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-097",
+      "appointments": [
+        {
+          "id": "APT-097-1",
+          "time": "14h00",
+          "date": "24/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 11",
+          "specialty": "Gynécologie",
+          "doctor": "Dr Durand"
+        }
+      ]
+    },
+    {
+      "id": "USER-098",
+      "lastName": "BLANC",
+      "firstName": "Christophe",
+      "fullName": "Christophe BLANC",
+      "birthDate": "15/03/1969",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Christophe%20BLANC&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-098",
+      "appointments": [
+        {
+          "id": "APT-098-1",
+          "time": "09h30",
+          "date": "20/06/2026",
+          "building": "Bâtiment C",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 9",
+          "specialty": "Ophtalmologie",
+          "doctor": "Dr Michel"
+        }
+      ]
+    },
+    {
+      "id": "USER-099",
+      "lastName": "GARNIER",
+      "firstName": "Sophie",
+      "fullName": "Sophie GARNIER",
+      "birthDate": "28/04/1982",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Sophie%20GARNIER&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-099",
+      "appointments": [
+        {
+          "id": "APT-099",
+          "time": "16h00",
+          "date": "30/06/2026",
+          "building": "Bâtiment A",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 7",
+          "specialty": "Visite d'information et de prévention",
+          "doctor": "Dr Laurent"
+        }
+      ]
+    },
+    {
+      "id": "USER-100",
+      "lastName": "DUPONT",
+      "firstName": "François",
+      "fullName": "François DUPONT",
+      "birthDate": "13/05/1995",
+      "avatar": "https://api.dicebear.com/9.x/personas/svg?seed=Fran%C3%A7ois%20DUPONT&backgroundColor=d6ecfc,069beb",
+      "medicalRecordId": "HS79-100",
+      "appointments": [
+        {
+          "id": "APT-100-1",
+          "time": "11h30",
+          "date": "26/06/2026",
+          "building": "Pavillon annexe",
+          "floor": "Rez-de-chaussée",
+          "room": "Salle 5",
+          "specialty": "Pneumologie",
+          "doctor": "Dr Petit"
+        }
+      ]
+    }
+  ]
+}

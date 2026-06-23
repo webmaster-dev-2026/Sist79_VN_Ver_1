@@ -1,69 +1,189 @@
-import React from 'react';
-import { ArrowLeft, CheckCircle2, Clock, Stethoscope, DoorOpen, MapPin } from 'lucide-react';
+import { useState } from 'react';
+import {
+  ArrowLeft,
+  Building2,
+  CalendarDays,
+  ChevronLeft,
+  ChevronRight,
+  Clock,
+  DoorOpen,
+  Home,
+  Layers,
+  Stethoscope,
+} from 'lucide-react';
 import ScreenLayout from '../components/ScreenLayout';
+import EmptyAvatar from '../components/EmptyAvatar';
+import bgImage from '../assets/bgv2.png';
 import { BRAND } from '../theme/brand';
 import type { Appointment } from '../types';
 
 interface ResultScreenProps {
   appointment: Appointment;
-  onConfirm: () => void;
+  onHome: () => void;
   onBack: () => void;
 }
 
-export default function ResultScreen({ appointment, onConfirm, onBack }: ResultScreenProps) {
-  const cards = [
-    { icon: Clock,       label: 'Heure du rendez-vous', value: appointment.time,             hi: true  },
-    { icon: Stethoscope, label: 'Praticien',             value: appointment.doctor,           hi: true  },
-    { icon: DoorOpen,    label: 'Salle',                 value: `Salle ${appointment.room}`,  hi: false },
-    { icon: MapPin,      label: 'Étage',                 value: appointment.floor,            hi: false },
-  ];
+export default function ResultScreen({ appointment, onHome, onBack }: ResultScreenProps) {
+  const appointments = appointment.appointments;
+  const initialIndex = Math.max(
+    0,
+    appointments.findIndex((apt) => apt.id === appointment.id),
+  );
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  const apt = appointments[currentIndex];
+  const hasMultiple = appointments.length > 1;
+
+  const goPrev = () => {
+    setCurrentIndex((index) => (index - 1 + appointments.length) % appointments.length);
+  };
+
+  const goNext = () => {
+    setCurrentIndex((index) => (index + 1) % appointments.length);
+  };
+
+  const locationRows = [
+    { icon: Building2, label: 'Bâtiment', value: apt.building },
+    { icon: Layers, label: 'Étage', value: apt.floor },
+    { icon: DoorOpen, label: 'Salle', value: apt.room },
+  ] as const;
 
   return (
-    <ScreenLayout subtitle="Votre rendez-vous">
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '24px 48px', gap: '20px', overflow: 'auto' }}>
-        <div style={{ textAlign: 'center' }}>
-          <div className="kiosk-label" style={{ marginBottom: '6px' }}>Bonjour</div>
-          <h2 style={{ fontSize: '52px', fontWeight: 800, color: BRAND.navy, margin: 0 }}>
+    <ScreenLayout subtitle="Votre rendez-vous" backgroundImage={bgImage} overlay={false}>
+      <div className="result-screen liquid-glass-chip">
+        <div className="result-screen-user">
+          <div className="result-avatar-wrap">
+            <EmptyAvatar size={88} />
+          </div>
+          <h3 className="result-user-name">
             {appointment.firstName}{' '}
             <span className="welcome-title-accent">{appointment.lastName}</span>
-          </h2>
-          <p style={{ color: BRAND.muted, fontSize: '17px', marginTop: '8px' }}>Votre rendez-vous du jour a bien été trouvé.</p>
+          </h3>
+          <div className="result-user-birth">
+            <span className="result-user-birth-label">Date de naissance</span>
+            <span className="result-user-birth-value">{appointment.birthDate}</span>
+          </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-          {cards.map(({ icon: Icon, label, value, hi }) => (
-            <div key={label} className={`kiosk-field${hi ? ' kiosk-field--active' : ''}`} style={{ cursor: 'default' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                <div className="liquid-glass-icon" style={{
-                  borderRadius: '12px', padding: '12px', display: 'flex',
-                  background: hi ? undefined : BRAND.surfaceSoft,
-                }}>
-                  <Icon size={26} color={BRAND.blue} />
+        <div className="result-screen-divider" aria-hidden />
+
+        <div className="result-appointment-carousel">
+          {hasMultiple && (
+            <button
+              type="button"
+              className="result-carousel-btn"
+              aria-label="Rendez-vous précédent"
+              onPointerDown={(e) => {
+                e.preventDefault();
+                goPrev();
+              }}
+            >
+              <ChevronLeft size={28} strokeWidth={2.25} />
+            </button>
+          )}
+
+          <div className="result-appointment-carousel-main">
+            <div className="result-appointment-body">
+              <div className="result-appointment-datetime">
+                <div className="result-appointment-datetime-item">
+                  <CalendarDays size={22} strokeWidth={1.75} color={BRAND.blue} />
+                  <div>
+                    <div className="result-appointment-meta-label">Date</div>
+                    <div className="result-appointment-meta-value">{apt.date}</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="kiosk-label" style={{ letterSpacing: '1.5px', marginBottom: '4px' }}>{label}</div>
-                  <div style={{ fontSize: '24px', fontWeight: 700, color: BRAND.navy }}>{value}</div>
+                <div className="result-appointment-datetime-rule" aria-hidden />
+                <div className="result-appointment-datetime-item">
+                  <Clock size={22} strokeWidth={1.75} color={BRAND.blue} />
+                  <div>
+                    <div className="result-appointment-meta-label">Heure</div>
+                    <div className="result-appointment-meta-value">{apt.time}</div>
+                  </div>
                 </div>
               </div>
+
+              <div className="result-appointment-doctor-block">
+                <div className="liquid-glass-icon result-appointment-doctor-icon">
+                  <Stethoscope size={24} strokeWidth={1.75} color={BRAND.blue} />
+                </div>
+                <div>
+                  <div className="result-appointment-meta-label">Médecin</div>
+                  <div className="result-appointment-doctor-name">{apt.doctor}</div>
+                  <div className="result-appointment-doctor-specialty">{apt.specialty}</div>
+                </div>
+              </div>
+
+              <div className="result-appointment-location-grid">
+                {locationRows.map(({ icon: Icon, label, value }) => (
+                  <div key={label} className="result-appointment-location-row">
+                    <div className="liquid-glass-icon result-appointment-location-icon">
+                      <Icon size={20} strokeWidth={1.75} color={BRAND.blue} />
+                    </div>
+                    <div className="result-appointment-location-text">
+                      <div className="result-appointment-meta-label">{label}</div>
+                      <div className="result-appointment-location-value">{value}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
 
-        <div className="liquid-glass-blue" style={{
-          borderRadius: '20px', padding: '20px 28px', display: 'flex', alignItems: 'center', gap: '20px',
-        }}>
-          <div style={{ background: 'rgba(255,255,255,0.2)', borderRadius: '12px', padding: '12px', display: 'flex', flexShrink: 0 }}>
-            <MapPin size={26} />
+            {hasMultiple && (
+              <div className="result-carousel-dots" role="tablist" aria-label="Rendez-vous">
+                {appointments.map((item, index) => (
+                  <button
+                    key={item.id}
+                    type="button"
+                    role="tab"
+                    aria-selected={index === currentIndex}
+                    aria-label={`Rendez-vous ${index + 1}`}
+                    className={`result-carousel-dot${index === currentIndex ? ' result-carousel-dot--active' : ''}`}
+                    onPointerDown={(e) => {
+                      e.preventDefault();
+                      setCurrentIndex(index);
+                    }}
+                  />
+                ))}
+              </div>
+            )}
           </div>
-          <p style={{ fontSize: '19px', fontWeight: 600, margin: 0 }}>{appointment.instructions}</p>
+
+          {hasMultiple && (
+            <button
+              type="button"
+              className="result-carousel-btn"
+              aria-label="Rendez-vous suivant"
+              onPointerDown={(e) => {
+                e.preventDefault();
+                goNext();
+              }}
+            >
+              <ChevronRight size={28} strokeWidth={2.25} />
+            </button>
+          )}
         </div>
 
-        <div style={{ display: 'flex', gap: '16px' }}>
-          <button type="button" className="kiosk-btn kiosk-btn-secondary" style={{ flex: 1 }} onPointerDown={(e) => { e.preventDefault(); onBack(); }}>
+        <div className="result-actions">
+          <button
+            type="button"
+            className="kiosk-btn kiosk-btn-secondary"
+            style={{ flex: 1 }}
+            onPointerDown={(e) => {
+              e.preventDefault();
+              onBack();
+            }}
+          >
             <ArrowLeft size={22} /> Retour
           </button>
-          <button type="button" className="kiosk-btn kiosk-btn-primary" style={{ flex: 2 }} onPointerDown={(e) => { e.preventDefault(); onConfirm(); }}>
-            <CheckCircle2 size={26} /> Confirmer mon arrivée
+          <button
+            type="button"
+            className="kiosk-btn kiosk-btn-primary"
+            style={{ flex: 2 }}
+            onPointerDown={(e) => {
+              e.preventDefault();
+              onHome();
+            }}
+          >
+            <Home size={26} /> Retour à l'accueil
           </button>
         </div>
       </div>

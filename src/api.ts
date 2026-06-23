@@ -1,65 +1,81 @@
-import type { Appointment, SearchParams } from './types';
+import userData from './data/user.json';
+import type { Appointment, SearchParams, User, UserAppointment } from './types';
 
-const DEMO_DATA: Appointment[] = [
-  {
-    id: 'APT-001',
-    lastName: 'DUPONT',
-    firstName: 'Jean',
-    birthDate: '15/03/1975',
-    time: '09h30',
-    doctor: 'Dr Martin',
-    room: '12',
-    floor: 'Rez-de-chaussée',
-    instructions: 'Veuillez vous présenter en salle d\'attente.',
-  },
-  {
-    id: 'APT-002',
-    lastName: 'MARTIN',
-    firstName: 'Claire',
-    birthDate: '22/07/1982',
-    time: '10h15',
-    doctor: 'Dr Bernard',
-    room: '4',
-    floor: '1er étage',
-    instructions: 'Prenez l\'ascenseur jusqu\'au 1er étage.',
-  },
-  {
-    id: 'APT-003',
-    lastName: 'LEROUX',
-    firstName: 'Michel',
-    birthDate: '08/11/1968',
-    time: '11h00',
-    doctor: 'Dr Fontaine',
-    room: '7',
-    floor: 'Rez-de-chaussée',
-    instructions: 'Veuillez vous présenter en salle d\'attente.',
-  },
-  {
-    id: 'APT-004',
-    lastName: 'BERNARD',
-    firstName: 'Sophie',
-    birthDate: '14/04/1990',
-    time: '14h30',
-    doctor: 'Dr Leroy',
-    room: '3',
-    floor: 'Rez-de-chaussée',
-    instructions: 'Veuillez vous présenter en salle d\'attente.',
-  },
-];
-
+const users = userData.users as User[];
 const arrivals = new Set<string>();
+
+function todayString(): string {
+  const now = new Date();
+  const dd = String(now.getDate()).padStart(2, '0');
+  const mm = String(now.getMonth() + 1).padStart(2, '0');
+  const yyyy = String(now.getFullYear());
+  return `${dd}/${mm}/${yyyy}`;
+}
+
+function parseDate(value: string): Date {
+  const [dd, mm, yyyy] = value.split('/').map(Number);
+  return new Date(yyyy, mm - 1, dd);
+}
+
+function pickAppointment(appointments: UserAppointment[]): UserAppointment | null {
+  if (!appointments.length) return null;
+
+  const today = todayString();
+  const todayApt = appointments.find((a) => a.date === today);
+  if (todayApt) return todayApt;
+
+  const todayTime = parseDate(today).getTime();
+  const sorted = [...appointments].sort(
+    (a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime(),
+  );
+
+  return sorted.find((a) => parseDate(a.date).getTime() >= todayTime) ?? sorted[sorted.length - 1];
+}
+
+function sortAppointments(appointments: UserAppointment[]): UserAppointment[] {
+  return [...appointments].sort(
+    (a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime(),
+  );
+}
+
+function buildInstructions(apt: UserAppointment): string {
+  return `Rendez-vous au ${apt.building}, ${apt.floor}, ${apt.room}.`;
+}
 
 export function searchAppointment(params: SearchParams): Appointment | null {
   const prefix = params.namePrefix.toUpperCase().trim();
   const birth = params.birthDate.trim();
 
-  const found = DEMO_DATA.find(
-    (apt) =>
-      apt.lastName.startsWith(prefix) &&
-      apt.birthDate === birth
+  const user = users.find(
+    (u) => u.lastName.startsWith(prefix) && u.birthDate === birth,
   );
+  if (!user) return null;
 
-  return found ?? null;
+  const apt = pickAppointment(user.appointments);
+  if (!apt) return null;
+
+  const today = todayString();
+  const allAppointments = sortAppointments(user.appointments);
+
+  return {
+    id: apt.id,
+    userId: user.id,
+    lastName: user.lastName,
+    firstName: user.firstName,
+    birthDate: user.birthDate,
+    avatar: user.avatar,
+    medicalRecordId: user.medicalRecordId,
+    date: apt.date,
+    time: apt.time,
+    doctor: apt.doctor,
+    room: apt.room,
+    floor: apt.floor,
+    building: apt.building,
+    specialty: apt.specialty,
+    instructions: buildInstructions(apt),
+    isToday: apt.date === today,
+    appointments: allAppointments,
+  };
 }
 
 export function confirmArrival(appointmentId: string): boolean {

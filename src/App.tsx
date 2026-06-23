@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import type { Appointment, SearchParams } from './types';
-import { searchAppointment, confirmArrival } from './api';
+import { searchAppointment } from './api';
 import WelcomeScreen from './screens/WelcomeScreen';
 import IdentificationScreen from './screens/IdentificationScreen';
 import ResultScreen from './screens/ResultScreen';
@@ -20,15 +20,11 @@ export default function App() {
     if (found) {
       setAppointment(found);
       setScreen('result');
-    } else {
-      setScreen('notfound');
+      return;
     }
+    setAppointment(null);
+    setScreen('notfound');
   }, []);
-
-  const handleConfirm = useCallback(() => {
-    if (appointment) confirmArrival(appointment.id);
-    setScreen('confirmation');
-  }, [appointment]);
 
   const handleHome = useCallback(() => {
     setAppointment(null);
@@ -42,7 +38,12 @@ export default function App() {
         <IdentificationScreen onSearch={handleSearch} onBack={handleHome} />
       )}
       {screen === 'result' && appointment && (
-        <ResultScreen appointment={appointment} onConfirm={handleConfirm} onBack={() => setScreen('identification')} />
+        <ResultScreen
+          key={appointment.id}
+          appointment={appointment}
+          onHome={handleHome}
+          onBack={() => setScreen('identification')}
+        />
       )}
       {screen === 'confirmation' && <ConfirmationScreen onReturn={handleHome} />}
       {screen === 'notfound' && <NotFoundScreen onBack={() => setScreen('identification')} onHome={handleHome} />}

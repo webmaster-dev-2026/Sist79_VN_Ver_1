@@ -43,9 +43,9 @@ export default function IdentificationScreen({ onSearch, onBack }: Identificatio
 
   return (
     <ScreenLayout footer="Vos données sont traitées uniquement pour la gestion de votre rendez-vous — RGPD" backgroundImage={bgImage}>
-      <div style={{ flex: 1, display: 'flex', gap: '32px', padding: '24px 48px', overflow: 'hidden', minHeight: 0 }}>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', width: '400px', flexShrink: 0 }}>
-          <h2 style={{ fontSize: '28px', fontWeight: 700, color: BRAND.navy, margin: 0 }}>Vos informations</h2>
+      <div className="identification-layout">
+        <div className="liquid-glass-chip identification-panel">
+          <h2 className="identification-panel-title">Vos informations</h2>
 
           {error && (
             <div style={{
@@ -96,7 +96,7 @@ export default function IdentificationScreen({ onSearch, onBack }: Identificatio
             </div>
           </div>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: 'auto' }}>
+          <div className="identification-panel-actions">
             <button type="button" className="kiosk-btn kiosk-btn-primary" onPointerDown={(e) => { e.preventDefault(); handleSearch(); }}>
               <Search size={22} /> Rechercher
             </button>
@@ -105,8 +105,6 @@ export default function IdentificationScreen({ onSearch, onBack }: Identificatio
             </button>
           </div>
         </div>
-
-        <div className="kiosk-divider" />
 
         <div className="kiosk-keyboard-panel">
           <p className="kiosk-keyboard-hint">

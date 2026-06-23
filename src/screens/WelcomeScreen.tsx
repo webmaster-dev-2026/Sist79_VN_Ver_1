@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { CalendarClock, ChevronRight, HeartPulse, Shield, Users } from 'lucide-react';
 import ScreenLayout from '../components/ScreenLayout';
 import { BRAND } from '../theme/brand';
@@ -14,47 +14,55 @@ interface WelcomeScreenProps {
 }
 
 export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
+  const featuresRef = useRef<HTMLDivElement>(null);
+  const [featuresWidth, setFeaturesWidth] = useState<number>();
+
+  useEffect(() => {
+    const node = featuresRef.current;
+    if (!node) return;
+
+    const update = () => setFeaturesWidth(node.getBoundingClientRect().width);
+    update();
+
+    const observer = new ResizeObserver(update);
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <ScreenLayout footer="SiST 79 — 1 Rue Alfred Nobel, 79000 Niort — Tél : 05 49 76 60 00">
-      <div style={{
-        flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center',
-        justifyContent: 'center', padding: '32px 64px', gap: '50px',
-      }}>
+    <ScreenLayout footer="SiST 79 — 1 Rue Alfred Nobel, 79000 Niort — Tél : 05 49 76 60 00" overlay={false}>
+      <div className="welcome-hero-wrap">
+        <div className="liquid-glass-chip welcome-hero-panel">
         <div style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '56px', fontWeight: 800, color: BRAND.navy, margin: 0, lineHeight: 1.15, letterSpacing: '-0.5px' }}>
+          <h1 style={{ fontSize: '50px', fontWeight: 700, color: BRAND.navy, margin: 0, lineHeight: 1.15, letterSpacing: '-0.02em' }}>
             Bienvenue chez{' '}
             <span className="welcome-title-accent">SiST79</span>
           </h1>
-          <p style={{ fontSize: '18px', color: BRAND.muted, fontWeight: 500, marginTop: '14px' }}>
+          <p style={{ fontSize: '18px', color: BRAND.muted, fontWeight: 400, marginTop: '14px' }}>
             Consultez votre rendez-vous en quelques secondes.
           </p>
         </div>
 
-        <button
-          type="button"
-          className="welcome-cta liquid-glass-blue liquid-glass-pill"
-          onPointerDown={(e) => { e.preventDefault(); onStart(); }}
-        >
-          <CalendarClock size={32} strokeWidth={1.75} style={{ flexShrink: 0, justifySelf: 'start' }} />
-          <span style={{ textAlign: 'center', whiteSpace: 'nowrap' }}>Consulter mon rendez-vous</span>
-          <div className="welcome-cta-arrows" aria-hidden>
-            <div className="welcome-cta-arrows-track">
-              <ChevronRight size={26} strokeWidth={2.5} />
-              <ChevronRight size={26} strokeWidth={2.5} />
-              <ChevronRight size={26} strokeWidth={2.5} />
-              <ChevronRight size={26} strokeWidth={2.5} />
+        <div className="welcome-actions">
+          <button
+            type="button"
+            className="welcome-cta liquid-glass-blue liquid-glass-pill"
+            style={featuresWidth ? { width: featuresWidth } : undefined}
+            onPointerDown={(e) => { e.preventDefault(); onStart(); }}
+          >
+            <CalendarClock size={32} strokeWidth={1.75} style={{ flexShrink: 0, justifySelf: 'start' }} />
+            <span style={{ textAlign: 'center', whiteSpace: 'nowrap' }}>Consulter mon rendez-vous</span>
+            <div className="welcome-cta-arrows" aria-hidden>
+              <div className="welcome-cta-arrows-track">
+                <ChevronRight size={26} strokeWidth={2.5} />
+                <ChevronRight size={26} strokeWidth={2.5} />
+                <ChevronRight size={26} strokeWidth={2.5} />
+                <ChevronRight size={26} strokeWidth={2.5} />
+              </div>
             </div>
-          </div>
-        </button>
+          </button>
 
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexWrap: 'wrap',
-          maxWidth: '920px',
-          width: '100%',
-        }}>
+          <div ref={featuresRef} className="welcome-features">
           {FEATURES.map(({ icon: Icon, label }, index) => (
             <React.Fragment key={label}>
               {index > 0 && <div className="liquid-glass-divider" aria-hidden />}
@@ -74,6 +82,8 @@ export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
               </div>
             </React.Fragment>
           ))}
+          </div>
+        </div>
         </div>
       </div>
     </ScreenLayout>

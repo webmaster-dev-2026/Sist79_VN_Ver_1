@@ -21,12 +21,22 @@ export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
     const node = featuresRef.current;
     if (!node) return;
 
-    const update = () => setFeaturesWidth(node.getBoundingClientRect().width);
+    const update = () => {
+      if (window.innerWidth < 900) {
+        setFeaturesWidth(undefined);
+        return;
+      }
+      setFeaturesWidth(node.getBoundingClientRect().width);
+    };
     update();
 
     const observer = new ResizeObserver(update);
     observer.observe(node);
-    return () => observer.disconnect();
+    window.addEventListener('resize', update);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', update);
+    };
   }, []);
 
   return (
@@ -34,7 +44,7 @@ export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
       <div className="welcome-hero-wrap">
         <div className="liquid-glass-chip welcome-hero-panel">
         <div style={{ textAlign: 'center' }}>
-          <h1 style={{ fontSize: '50px', fontWeight: 700, color: BRAND.navy, margin: 0, lineHeight: 1.15, letterSpacing: '-0.02em' }}>
+          <h1 className="welcome-hero-title" style={{ fontWeight: 700, color: BRAND.navy, margin: 0, lineHeight: 1.15, letterSpacing: '-0.02em' }}>
             Bienvenue chez{' '}
             <span className="welcome-title-accent">SiST79</span>
           </h1>
@@ -50,8 +60,8 @@ export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
             style={featuresWidth ? { width: featuresWidth } : undefined}
             onPointerDown={(e) => { e.preventDefault(); onStart(); }}
           >
-            <CalendarClock size={32} strokeWidth={1.75} style={{ flexShrink: 0, justifySelf: 'start' }} />
-            <span style={{ textAlign: 'center', whiteSpace: 'nowrap' }}>Consulter mon rendez-vous</span>
+            <CalendarClock size={32} strokeWidth={1.75} className="welcome-cta-icon" />
+            <span className="welcome-cta-label">Consulter mon rendez-vous</span>
             <div className="welcome-cta-arrows" aria-hidden>
               <div className="welcome-cta-arrows-track">
                 <ChevronRight size={26} strokeWidth={2.5} />
@@ -66,19 +76,11 @@ export default function WelcomeScreen({ onStart }: WelcomeScreenProps) {
           {FEATURES.map(({ icon: Icon, label }, index) => (
             <React.Fragment key={label}>
               {index > 0 && <div className="liquid-glass-divider" aria-hidden />}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '6px 8px' }}>
-                <div className="liquid-glass-icon" style={{
-                  width: '52px', height: '52px', borderRadius: '50%', flexShrink: 0,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                }}>
+              <div className="welcome-feature-item">
+                <div className="liquid-glass-icon welcome-feature-icon">
                   <Icon size={24} strokeWidth={1.75} color={BRAND.blue} />
                 </div>
-                <span style={{
-                  fontWeight: 600, fontSize: '15px', color: BRAND.navy,
-                  letterSpacing: '-0.01em', lineHeight: 1.35, whiteSpace: 'nowrap',
-                }}>
-                  {label}
-                </span>
+                <span className="welcome-feature-label">{label}</span>
               </div>
             </React.Fragment>
           ))}

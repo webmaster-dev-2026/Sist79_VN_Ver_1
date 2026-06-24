@@ -69,7 +69,7 @@ export default function IdentificationScreen({ onSearch, onBack }: Identificatio
                 }}>
                   {namePrefix || '_ _ _'}
                 </div>
-                <div style={{ fontSize: '13px', color: BRAND.muted, marginTop: '6px' }}>Exemple : DUP pour DUPONT</div>
+                <div className="identification-field-hint">Exemple : DUP pour DUPONT</div>
               </div>
               <div className="liquid-glass-icon kiosk-field-icon">
                 <User size={24} strokeWidth={1.75} color={BRAND.blue} />

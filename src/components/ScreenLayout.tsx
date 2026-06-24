@@ -40,7 +40,7 @@ export default function ScreenLayout({
         minHeight: 0,
       }}>
         <KioskHeader subtitle={subtitle} />
-        <div style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', width: '100%' }}>
+        <div className="screen-layout-body" style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', width: '100%' }}>
           {children}
         </div>
         {footer && (

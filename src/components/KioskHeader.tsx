@@ -13,7 +13,7 @@ function AnalogClock({ date, size = 52 }: { date: Date; size?: number }) {
   const r = size / 2 - 3;
 
   return (
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden style={{ flexShrink: 0 }}>
+    <svg className="kiosk-analog-clock" width={size} height={size} viewBox={`0 0 ${size} ${size}`} aria-hidden>
       <defs>
         <linearGradient id={gradientId} x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" stopColor={BRAND.cyan} />
@@ -72,21 +72,14 @@ export default function KioskHeader({ subtitle }: KioskHeaderProps) {
   const date = now.toLocaleDateString('fr-FR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
 
   return (
-    <header style={{
-      display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-      padding: '24px 48px',
-      background: 'transparent',
-      position: 'relative', flexShrink: 0,
-    }}>
+    <header className="kiosk-header">
       <BrandLogo />
 
       {subtitle && (
-        <div style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
+        <div className="kiosk-header-subtitle" style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
           <span style={{
-            fontSize: '15px',
             fontWeight: 700,
             color: BRAND.blueDark,
-            letterSpacing: '2px',
             textTransform: 'uppercase',
           }}>
             {subtitle}
@@ -94,27 +87,11 @@ export default function KioskHeader({ subtitle }: KioskHeaderProps) {
         </div>
       )}
 
-      <div className="liquid-glass-chip" style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '10px 18px' }}>
+      <div className="liquid-glass-chip kiosk-header-clock">
         <AnalogClock date={now} />
-        <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
-          <div style={{
-            fontSize: '30px',
-            fontWeight: 700,
-            color: BRAND.navy,
-            fontVariantNumeric: 'tabular-nums',
-            letterSpacing: '-0.5px',
-          }}>
-            {time}
-          </div>
-          <div style={{
-            fontSize: '15px',
-            fontWeight: 500,
-            color: BRAND.cyan,
-            textTransform: 'capitalize',
-            marginTop: '2px',
-          }}>
-            {date}
-          </div>
+        <div className="kiosk-header-clock-text">
+          <div className="kiosk-header-time">{time}</div>
+          <div className="kiosk-header-date">{date}</div>
         </div>
       </div>
     </header>

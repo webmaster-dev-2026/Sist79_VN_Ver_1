@@ -34,6 +34,11 @@ export default function IdentificationScreen({ onSearch, onBack }: Identificatio
     return `${d.slice(0, 2)}/${d.slice(2, 4)}/${d.slice(4, 8)}`;
   })();
 
+  const handleNameChange = (val: string) => {
+    setNamePrefix(val);
+    if (val.length >= 3) setActiveField('date');
+  };
+
   const handleSearch = () => {
     if (namePrefix.length < 3) { setError('Veuillez saisir au moins 3 lettres de votre nom.'); setActiveField('name'); return; }
     if (!birthDate) { setError('Veuillez saisir votre date de naissance complète.'); setActiveField('date'); return; }
@@ -113,7 +118,7 @@ export default function IdentificationScreen({ onSearch, onBack }: Identificatio
                 {activeField === 'name' ? 'Tapez les 3 premières lettres de votre nom' : 'Tapez votre date de naissance'}
               </p>
               {activeField === 'name'
-                ? <VirtualKeyboard value={namePrefix} onChange={setNamePrefix} maxLength={3} mode="alpha" />
+                ? <VirtualKeyboard value={namePrefix} onChange={handleNameChange} maxLength={3} mode="alpha" />
                 : <DateInput value={birthRaw} onChange={setBirthRaw} />
               }
             </div>

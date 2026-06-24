@@ -1,5 +1,5 @@
 import React from 'react';
-import { Delete, Calendar } from 'lucide-react';
+import { Delete, Calendar, X } from 'lucide-react';
 import { BRAND } from '../theme/brand';
 
 interface DateInputProps {
@@ -7,7 +7,23 @@ interface DateInputProps {
   onChange: (v: string) => void;
 }
 
+function useMobileView() {
+  const [mobile, setMobile] = React.useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(max-width: 499px)').matches,
+  );
+
+  React.useEffect(() => {
+    const mq = window.matchMedia('(max-width: 499px)');
+    const onChange = (e: MediaQueryListEvent) => setMobile(e.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
+
+  return mobile;
+}
+
 export default function DateInput({ value, onChange }: DateInputProps) {
+  const mobile = useMobileView();
   const raw = value.replace(/\D/g, '').slice(0, 8);
 
   const formatted = () => {
@@ -19,6 +35,7 @@ export default function DateInput({ value, onChange }: DateInputProps) {
 
   const press = (d: string) => { if (raw.length < 8) onChange(raw + d); };
   const backspace = () => onChange(raw.slice(0, -1));
+  const clearAll = () => onChange('');
 
   return (
     <div className="date-input">
@@ -30,9 +47,20 @@ export default function DateInput({ value, onChange }: DateInputProps) {
           }}>
             {formatted() || 'JJ/MM/AAAA'}
           </span>
-          <div className="liquid-glass-icon kiosk-field-icon">
-            <Calendar size={22} strokeWidth={1.75} color={BRAND.blue} />
-          </div>
+          {mobile && raw.length > 0 ? (
+            <button
+              type="button"
+              className="liquid-glass-icon kiosk-field-icon date-input-clear-btn"
+              aria-label="Effacer tout"
+              onPointerDown={(e) => { e.preventDefault(); clearAll(); }}
+            >
+              <X size={22} strokeWidth={2.25} color={BRAND.blue} />
+            </button>
+          ) : (
+            <div className="liquid-glass-icon kiosk-field-icon">
+              <Calendar size={22} strokeWidth={1.75} color={BRAND.blue} />
+            </div>
+          )}
         </div>
       </div>
 

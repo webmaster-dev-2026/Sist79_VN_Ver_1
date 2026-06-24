@@ -1394,25 +1394,26 @@ html, body {
 
   .welcome-cta {
     width: 100% !important;
-    font-size: clamp(15px, 3.8vw, 18px);
-    padding: 14px 18px;
-    grid-template-columns: 28px 1fr 28px;
-    gap: 10px;
+    font-size: 14px;
+    padding: 12px 14px;
+    grid-template-columns: 24px 1fr 24px;
+    gap: 8px;
   }
 
   .welcome-cta-icon {
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
   }
 
   .welcome-cta-label {
-    white-space: normal;
-    font-size: clamp(14px, 3.5vw, 17px);
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 1.2;
   }
 
   .welcome-cta-arrows {
-    --arrow-size: 22px;
-    --arrow-overlap: 12px;
+    --arrow-size: 20px;
+    --arrow-overlap: 10px;
   }
 }
 

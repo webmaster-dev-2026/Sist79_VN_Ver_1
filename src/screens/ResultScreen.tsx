@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import {
   ArrowLeft,
   Building2,
@@ -9,12 +9,13 @@ import {
   DoorOpen,
   Home,
   Layers,
+  MapPin,
   Stethoscope,
 } from 'lucide-react';
 import ScreenLayout from '../components/ScreenLayout';
 import EmptyAvatar from '../components/EmptyAvatar';
 import bgImage from '../assets/bgv2.png';
-import { BRAND } from '../theme/brand';
+import { BRAND, SITE } from '../theme/brand';
 import type { Appointment } from '../types';
 
 interface ResultScreenProps {
@@ -86,44 +87,69 @@ export default function ResultScreen({ appointment, onHome, onBack }: ResultScre
               <div className="result-appointment-datetime">
                 <div className="result-appointment-datetime-item">
                   <CalendarDays size={22} strokeWidth={1.75} color={BRAND.blue} />
-                  <div>
-                    <div className="result-appointment-meta-label">Date</div>
-                    <div className="result-appointment-meta-value">{apt.date}</div>
+                  <div className="result-meta-inline">
+                    <span className="result-appointment-meta-label">Date</span>
+                    <span className="result-appointment-meta-value">{apt.date}</span>
                   </div>
                 </div>
                 <div className="result-appointment-datetime-rule" aria-hidden />
                 <div className="result-appointment-datetime-item">
                   <Clock size={22} strokeWidth={1.75} color={BRAND.blue} />
-                  <div>
-                    <div className="result-appointment-meta-label">Heure</div>
-                    <div className="result-appointment-meta-value">{apt.time}</div>
+                  <div className="result-meta-inline">
+                    <span className="result-appointment-meta-label">Heure</span>
+                    <span className="result-appointment-meta-value">{apt.time}</span>
                   </div>
                 </div>
               </div>
 
               <div className="result-appointment-doctor-block">
-                <div className="liquid-glass-icon result-appointment-doctor-icon">
-                  <Stethoscope size={24} strokeWidth={1.75} color={BRAND.blue} />
+                <div className="result-appointment-doctor-item">
+                  <div className="liquid-glass-icon result-appointment-doctor-icon">
+                    <Stethoscope size={24} strokeWidth={1.75} color={BRAND.blue} />
+                  </div>
+                  <div className="result-meta-inline">
+                    <span className="result-appointment-meta-label">Médecin traitant :</span>
+                    <span className="result-appointment-doctor-name">{apt.doctor}</span>
+                  </div>
                 </div>
-                <div>
-                  <div className="result-appointment-meta-label">Médecin</div>
-                  <div className="result-appointment-doctor-name">{apt.doctor}</div>
-                  <div className="result-appointment-doctor-specialty">{apt.specialty}</div>
+                <div className="result-appointment-datetime-rule" aria-hidden />
+                <div className="result-appointment-doctor-item result-appointment-doctor-item--specialty">
+                  <div className="result-meta-inline">
+                    <span className="result-appointment-meta-label">Spécialité :</span>
+                    <span className="result-appointment-doctor-specialty">{apt.specialty}</span>
+                  </div>
                 </div>
               </div>
 
-              <div className="result-appointment-location-grid">
-                {locationRows.map(({ icon: Icon, label, value }) => (
-                  <div key={label} className="result-appointment-location-row">
-                    <div className="liquid-glass-icon result-appointment-location-icon">
-                      <Icon size={20} strokeWidth={1.75} color={BRAND.blue} />
+              <div className="result-appointment-location-block">
+                {locationRows.map(({ icon: Icon, label, value }, index) => (
+                  <Fragment key={label}>
+                    {index > 0 && <div className="result-appointment-datetime-rule" aria-hidden />}
+                    <div className="result-appointment-location-item">
+                      <div className="liquid-glass-icon result-appointment-location-icon">
+                        <Icon size={20} strokeWidth={1.75} color={BRAND.blue} />
+                      </div>
+                      <div className="result-meta-inline">
+                        <span className="result-appointment-meta-label">{label} :</span>
+                        <span className="result-appointment-location-value">{value}</span>
+                      </div>
                     </div>
-                    <div className="result-appointment-location-text">
-                      <div className="result-appointment-meta-label">{label}</div>
-                      <div className="result-appointment-location-value">{value}</div>
-                    </div>
-                  </div>
+                  </Fragment>
                 ))}
+              </div>
+
+              <div className="result-appointment-branch-block">
+                <div className="result-appointment-branch-item">
+                  <div className="liquid-glass-icon result-appointment-location-icon">
+                    <MapPin size={20} strokeWidth={1.75} color={BRAND.blue} />
+                  </div>
+                  <div className="result-meta-inline">
+                    <span className="result-appointment-meta-label">Établissement :</span>
+                    <span className="result-appointment-location-value">
+                      {SITE.branch} — {SITE.address}
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
 

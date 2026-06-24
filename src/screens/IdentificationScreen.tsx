@@ -106,15 +106,17 @@ export default function IdentificationScreen({ onSearch, onBack }: Identificatio
           </div>
         </div>
 
-        <div className="kiosk-keyboard-panel">
-          <p className="kiosk-keyboard-hint">
-            {activeField === 'name' ? 'Tapez les 3 premières lettres de votre nom' : 'Tapez votre date de naissance'}
-          </p>
-          <div className="kiosk-keyboard-body">
-            {activeField === 'name'
-              ? <VirtualKeyboard value={namePrefix} onChange={setNamePrefix} maxLength={3} mode="alpha" />
-              : <DateInput value={birthRaw} onChange={setBirthRaw} />
-            }
+        <div className="kiosk-keyboard-frame">
+          <div className="liquid-glass-chip kiosk-keyboard-panel">
+            <div className="kiosk-keyboard-body">
+              <p className="kiosk-keyboard-hint">
+                {activeField === 'name' ? 'Tapez les 3 premières lettres de votre nom' : 'Tapez votre date de naissance'}
+              </p>
+              {activeField === 'name'
+                ? <VirtualKeyboard value={namePrefix} onChange={setNamePrefix} maxLength={3} mode="alpha" />
+                : <DateInput value={birthRaw} onChange={setBirthRaw} />
+              }
+            </div>
           </div>
         </div>
       </div>

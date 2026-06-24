@@ -10,3 +10,10 @@ export const BRAND = {
   surface: '#e8f6fd',
   surfaceSoft: 'rgba(232, 246, 253, 0.75)',
 } as const;
+
+export const SITE = {
+  name: 'SiST 79',
+  branch: 'Centre SiST 79 — Niort',
+  address: '1 Rue Alfred Nobel, 79000 Niort',
+  phone: '05 49 76 60 00',
+} as const;

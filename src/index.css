@@ -340,10 +340,10 @@ html, body {
 
 /* ── Kiosk shared UI ── */
 .kiosk-label {
-  font-size: clamp(9px, 2.2vw, 11px);
+  font-size: 11px;
   font-weight: 700;
   color: #00a9db;
-  letter-spacing: clamp(1px, 0.4vw, 2px);
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
@@ -351,10 +351,10 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(6px, 1.2vw, 10px);
-  border-radius: clamp(12px, 2vw, 16px);
-  padding: clamp(14px, 2.5vw, 20px);
-  font-size: clamp(15px, 2.2vw, 19px);
+  gap: 10px;
+  border-radius: 16px;
+  padding: 20px;
+  font-size: 19px;
   font-weight: 700;
   cursor: pointer;
   font-family: inherit;
@@ -402,8 +402,8 @@ html, body {
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
   border: 2px solid rgba(214, 236, 252, 0.9);
-  border-radius: clamp(14px, 2.5vw, 20px);
-  padding: clamp(12px, 2.5vw, 20px) clamp(14px, 3vw, 24px);
+  border-radius: 20px;
+  padding: 20px 24px;
   cursor: pointer;
   transition: border-color 0.15s ease;
   box-shadow: none;
@@ -428,8 +428,8 @@ html, body {
 }
 
 .kiosk-field-icon {
-  width: clamp(38px, 10vw, 48px);
-  height: clamp(38px, 10vw, 48px);
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   flex-shrink: 0;
   display: flex;
@@ -438,7 +438,7 @@ html, body {
 }
 
 .kiosk-field-value {
-  font-size: clamp(20px, 4.5vw, 34px);
+  font-size: clamp(26px, 4.5vw, 34px);
   font-weight: 700;
   letter-spacing: 0.06em;
   font-variant-numeric: tabular-nums;
@@ -484,8 +484,8 @@ html, body {
 .identification-layout {
   flex: 1;
   display: flex;
-  gap: clamp(16px, 3vw, 32px);
-  padding: clamp(12px, 3vw, 24px) clamp(12px, 4vw, 48px);
+  gap: 32px;
+  padding: 24px 48px;
   overflow: hidden;
   min-height: 0;
 }
@@ -493,12 +493,12 @@ html, body {
 .identification-panel {
   display: flex;
   flex-direction: column;
-  gap: clamp(12px, 2vw, 20px);
+  gap: 28px;
   width: 400px;
   flex-shrink: 0;
   align-self: stretch;
-  padding: clamp(16px, 3vw, 28px) clamp(14px, 2.5vw, 24px);
-  border-radius: clamp(16px, 3vw, 24px);
+  padding: 28px 24px;
+  border-radius: 24px;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.85),
     0 8px 32px rgba(17, 26, 102, 0.07);
@@ -506,7 +506,7 @@ html, body {
 
 .identification-panel-title {
   margin: 0;
-  font-size: clamp(20px, 4.5vw, 28px);
+  font-size: 18px;
   font-weight: 700;
   color: #111a66;
 }
@@ -514,17 +514,13 @@ html, body {
 .identification-panel-actions {
   display: flex;
   flex-direction: column;
-  gap: clamp(8px, 1.5vw, 12px);
+  gap: 12px;
   margin-top: auto;
 }
 
-.identification-field-hint {
-  font-size: clamp(11px, 2.6vw, 13px);
-  color: #63759e;
-  margin-top: 6px;
-}
-
 .identification-panel .kiosk-field {
+  padding: 30px 28px;
+  min-height: 120px;
   background: linear-gradient(
     145deg,
     rgba(255, 255, 255, 0.94) 0%,
@@ -546,6 +542,34 @@ html, body {
     0 4px 16px rgba(6, 155, 235, 0.14);
 }
 
+.identification-panel .kiosk-label {
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.identification-panel .kiosk-field-value {
+  font-size: clamp(24px, 5.5vw, 34px);
+  line-height: 1.15;
+}
+
+.identification-panel .kiosk-field-icon {
+  width: 58px;
+  height: 58px;
+}
+
+.identification-panel .kiosk-field-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.identification-field-hint {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #63759e;
+  line-height: 1.2;
+}
+
 .kiosk-keyboard-frame {
   flex: 1;
   display: flex;
@@ -554,6 +578,7 @@ html, body {
   align-self: stretch;
   min-height: 0;
   min-width: 0;
+  overflow: hidden;
 }
 
 .kiosk-keyboard-panel {
@@ -562,13 +587,11 @@ html, body {
   width: 100%;
   max-width: 100%;
   height: 100%;
-  border-radius: clamp(16px, 3vw, 24px);
+  border-radius: 24px;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.85),
     0 8px 32px rgba(17, 26, 102, 0.07);
-  overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
 }
 
 .kiosk-keyboard-body {
@@ -577,23 +600,19 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: clamp(12px, 2.5vw, 20px);
+  gap: 20px;
   width: 100%;
-  padding: clamp(16px, 4vw, 40px);
+  padding: 40px;
   min-height: 0;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .kiosk-keyboard-hint {
   flex-shrink: 0;
   margin: 0;
-  font-size: clamp(12px, 3vw, 15px);
+  font-size: 15px;
   font-weight: 600;
   color: #069beb;
   text-align: center;
-  line-height: 1.35;
-  padding: 0 4px;
 }
 
 .result-screen {
@@ -722,6 +741,14 @@ html, body {
   gap: 14px;
 }
 
+.result-appointment-datetime-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  min-width: 0;
+}
+
 .result-appointment-datetime-rule {
   width: 1px;
   margin: 4px 18px;
@@ -761,7 +788,7 @@ html, body {
   font-size: 12px;
   font-weight: 600;
   color: #63759e;
-  white-space: nowrap;
+  line-height: 1.3;
 }
 
 .result-meta-inline {
@@ -974,11 +1001,6 @@ html, body {
   justify-content: center;
 }
 
-.result-avatar-wrap .empty-avatar {
-  width: 100%;
-  height: 100%;
-}
-
 .result-user-name {
   margin: 0;
   font-size: 20px;
@@ -1020,6 +1042,14 @@ html, body {
   height: 100%;
 }
 
+.result-screen-user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
 .result-actions {
   grid-column: 1 / -1;
   grid-row: 2;
@@ -1032,103 +1062,168 @@ html, body {
   border-top: 1px solid rgba(214, 236, 252, 0.85);
 }
 
-/* ── Virtual keyboard ── */
-.virtual-keyboard {
+.screen-layout-body {
+  flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ── Virtual keyboard ── */
+.virtual-keyboard {
+  --kb-gap: clamp(4px, 1vw, 12px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--kb-gap);
   width: 100%;
   max-width: 100%;
-  flex-shrink: 0;
 }
 
 .virtual-keyboard--numeric {
+  --kb-numeric-size: clamp(48px, 11vw, 68px);
+  --kb-numeric-gap: clamp(10px, 2.5vw, 18px);
   align-items: center;
-  gap: 12px;
+  gap: var(--kb-numeric-gap);
+  max-width: min(100%, calc(3 * var(--kb-numeric-size) + 2 * var(--kb-numeric-gap)));
+  margin-inline: auto;
+}
+
+.virtual-keyboard--alpha {
+  --kb-alpha-size: clamp(38px, 5vw, 56px);
+  --kb-alpha-font: clamp(14px, 2vw, 18px);
 }
 
 .virtual-keyboard-row {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  gap: clamp(3px, 0.75vw, 8px);
+  align-items: center;
+  gap: var(--kb-gap);
   width: 100%;
+}
+
+.virtual-keyboard--numeric .virtual-keyboard-row {
+  display: grid;
+  grid-template-columns: repeat(3, var(--kb-numeric-size));
+  gap: var(--kb-numeric-gap);
+  justify-content: center;
+  justify-items: center;
+  width: fit-content;
   max-width: 100%;
+  margin-inline: auto;
 }
 
-.kiosk-key--alpha {
-  flex: 1 1 0;
-  min-width: 0;
-  width: auto;
-  max-width: 64px;
-  height: clamp(30px, 7.5vw, 56px);
-  font-size: clamp(11px, 2.8vw, 18px);
-  padding: 0;
+.virtual-keyboard-row--numeric-bottom {
+  width: fit-content;
 }
 
-.kiosk-key--alpha-backspace {
-  flex: 1.1 1 0;
-  min-width: 0;
-  width: auto;
-  max-width: 88px;
-  height: clamp(30px, 7.5vw, 56px);
-  margin-left: 0;
-  padding: 0;
+.virtual-keyboard-row-spacer {
+  width: var(--kb-numeric-size);
+  min-width: var(--kb-numeric-size);
 }
 
 .kiosk-key--numeric {
-  width: clamp(52px, 14vw, 80px);
-  height: clamp(44px, 11vw, 64px);
-  font-size: clamp(16px, 4vw, 22px);
+  flex: none;
+  width: var(--kb-numeric-size);
+  height: var(--kb-numeric-size);
+  min-width: var(--kb-numeric-size);
+  max-width: var(--kb-numeric-size);
+  aspect-ratio: 1;
+  border-radius: min(18px, calc(var(--kb-numeric-size) * 0.28));
+  font-size: clamp(18px, calc(var(--kb-numeric-size) * 0.44), 30px);
+  font-weight: 800;
+  line-height: 1;
+  padding: 0;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.98),
+    0 4px 14px rgba(6, 155, 235, 0.12);
+}
+
+.kiosk-key--numeric:active {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.98),
+    0 3px 10px rgba(6, 155, 235, 0.2);
+}
+
+.kiosk-key--numeric-inline-backspace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  color: #069beb;
+}
+
+.kiosk-key--alpha {
+  flex: 0 0 var(--kb-alpha-size);
+  width: var(--kb-alpha-size);
+  height: var(--kb-alpha-size);
+  min-width: 0;
+  max-width: none;
+  font-size: var(--kb-alpha-font);
+  line-height: 1;
+}
+
+.kiosk-key--alpha-backspace {
+  flex: 0 0 calc(var(--kb-alpha-size) * 1.65);
+  width: calc(var(--kb-alpha-size) * 1.65);
+  height: var(--kb-alpha-size);
+  min-width: 0;
+  max-width: none;
+  margin-left: clamp(2px, 0.5vw, 8px);
+  font-size: var(--kb-alpha-font);
+  line-height: 1;
 }
 
 .kiosk-key--numeric-backspace {
-  width: clamp(68px, 18vw, 96px);
+  flex: 0 1 100%;
+  width: 100%;
+  max-width: 100%;
   height: clamp(40px, 10vw, 52px);
   margin-top: 4px;
   color: #069beb;
 }
 
+/* ── Date input keypad ── */
 .date-input {
+  --kb-numeric-size: clamp(48px, 11vw, 68px);
+  --kb-numeric-gap: clamp(10px, 2.5vw, 18px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(10px, 2.5vw, 16px);
+  gap: clamp(8px, 1.5vw, 14px);
   width: 100%;
-  max-width: min(300px, 100%);
-  flex-shrink: 0;
+  max-width: 100%;
 }
 
 .date-input-display {
   width: 100%;
-  cursor: default;
-  padding: clamp(12px, 2.5vw, 16px) clamp(14px, 3vw, 20px);
-  flex-shrink: 0;
+  max-width: 360px;
 }
 
-.date-input-clear-btn {
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-family: inherit;
-  background: transparent;
+.date-input-display.kiosk-field {
+  padding: 16px 20px;
 }
 
 .date-input-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(6px, 1.5vw, 10px);
-  width: 100%;
+  grid-template-columns: repeat(3, var(--kb-numeric-size));
+  gap: var(--kb-numeric-gap);
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  justify-content: center;
+  justify-items: center;
+}
+
+.date-input-grid-spacer {
+  width: var(--kb-numeric-size);
+  min-height: 0;
 }
 
 .date-input-grid .kiosk-key--numeric {
-  width: 100%;
-  max-width: none;
-}
-
-.date-input-clear {
-  width: clamp(110px, 36vw, 140px);
-  font-size: clamp(13px, 3vw, 15px) !important;
+  justify-self: center;
 }
 
 /* ── Header ── */
@@ -1227,97 +1322,288 @@ html, body {
 }
 
 @media (max-width: 1024px) {
+  .screen-layout-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    min-height: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .screen-layout-body:has(.identification-layout) {
+    overflow-y: hidden;
+  }
+
   .identification-layout {
+    flex: 1;
     flex-direction: column;
     align-items: stretch;
-    padding: 16px 24px;
-    flex: none;
-    min-height: auto;
-    overflow: visible;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 12px 16px 16px;
+    overflow: hidden;
+    min-height: 0;
+    max-height: 100%;
+    box-sizing: border-box;
+    --id-mobile-chrome: 360px;
+    --id-date-display: 68px;
   }
 
   .identification-panel {
     width: 100%;
     max-width: none;
-    flex-shrink: 1;
+    flex: 0 0 auto;
+    max-height: none;
+    min-height: 0;
+    align-self: stretch;
+    padding: 16px 14px;
+    gap: 20px;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .identification-panel-actions {
+    margin-top: 0;
+  }
+
+  .identification-panel .kiosk-field {
+    padding: 20px 18px;
+    min-height: 104px;
+    border-radius: 16px;
+  }
+
+  .identification-panel .kiosk-label {
+    margin-bottom: 6px;
+    font-size: 11px;
+    letter-spacing: 1.3px;
+  }
+
+  .identification-panel .kiosk-field-value {
+    font-size: clamp(20px, 6vw, 28px);
+    letter-spacing: 0.04em;
+  }
+
+  .identification-field-hint {
+    margin-top: 4px;
+    font-size: 11px;
+  }
+
+  .identification-panel .kiosk-field-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .identification-panel .kiosk-field-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .identification-panel .kiosk-field-row {
+    gap: 10px;
   }
 
   .kiosk-keyboard-frame {
-    flex: none;
-    min-height: auto;
+    flex: 1 1 0;
+    min-height: 0;
+    overflow: hidden;
+    align-self: stretch;
+    display: flex;
   }
 
   .kiosk-keyboard-panel {
-    height: auto;
-    min-height: unset;
-    overflow: visible;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
   }
 
   .kiosk-keyboard-body {
-    flex: none;
-    min-height: auto;
-    justify-content: flex-start;
-    overflow: visible;
+    flex: 1;
+    min-height: 0;
+    justify-content: center;
+    overflow: hidden;
+    padding: 12px;
+    gap: 0;
+    box-sizing: border-box;
+    container-type: size;
+  }
+
+  .kiosk-keyboard-hint {
+    display: none;
+  }
+
+  .kiosk-keyboard-body .virtual-keyboard--alpha,
+  .kiosk-keyboard-body .virtual-keyboard--alpha-mobile,
+  .kiosk-keyboard-body .virtual-keyboard--numeric,
+  .kiosk-keyboard-body .date-input {
+    flex: 1;
+    width: 100%;
+    max-width: 100%;
+    min-height: 0;
+    justify-content: center;
+    container-type: size;
+  }
+
+  .kiosk-keyboard-body .virtual-keyboard--alpha-mobile {
+    row-gap: var(--kb-gap);
+    --kb-alpha-size: clamp(
+      28px,
+      min(
+        calc((100cqw - 6 * var(--kb-gap)) / 7),
+        calc((100cqh - 3 * var(--kb-gap)) / 4)
+      ),
+      54px
+    );
+    --kb-alpha-font: min(20px, calc(var(--kb-alpha-size) * 0.44));
+  }
+
+  .kiosk-keyboard-body .virtual-keyboard--numeric {
+    --kb-numeric-size: clamp(
+      30px,
+      min(
+        calc((100cqw - 2 * var(--kb-numeric-gap, 12px)) / 3),
+        calc((100cqh - 3 * var(--kb-numeric-gap, 12px)) / 4)
+      ),
+      68px
+    );
+    --kb-numeric-gap: clamp(8px, 2vw, 14px);
+  }
+
+  .kiosk-keyboard-body .date-input {
+    --kb-numeric-size: clamp(
+      30px,
+      min(
+        calc((100cqw - 2 * var(--kb-numeric-gap, 12px)) / 3),
+        calc(
+          (
+            100cqh - var(--id-date-display) - 3 * var(--kb-numeric-gap, 12px)
+          ) / 4
+        )
+      ),
+      68px
+    );
+    --kb-numeric-gap: clamp(8px, 2vw, 14px);
+  }
+
+  .date-input-grid,
+  .virtual-keyboard--numeric {
+    max-width: 100%;
+  }
+
+  .date-input-grid {
+    width: min(
+      100%,
+      calc(3 * var(--kb-numeric-size) + 2 * var(--kb-numeric-gap))
+    );
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .date-input-grid .kiosk-key--numeric,
+  .virtual-keyboard--numeric .kiosk-key--numeric {
+    width: 100%;
+    max-width: var(--kb-numeric-size);
+    min-width: 0;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .virtual-keyboard--numeric .virtual-keyboard-row {
+    width: min(
+      100%,
+      calc(3 * var(--kb-numeric-size) + 2 * var(--kb-numeric-gap))
+    );
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .virtual-keyboard-row-spacer {
+    width: 100%;
+    min-width: 0;
   }
 
   .result-screen {
-    width: 96%;
-    max-width: 96%;
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr auto;
-    gap: 16px 0;
-    margin: 12px auto 16px;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    gap: 12px 0;
+    margin: 8px auto 12px;
+    padding: 16px;
+    overflow: hidden;
+    flex: 1;
+    min-height: 0;
+    border-radius: 20px;
   }
 
   .result-screen-user {
     grid-column: 1;
     grid-row: 1;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
-    justify-content: start;
     text-align: left;
-    gap: 6px 14px;
-    padding: 4px 0 12px;
+    gap: 14px;
+    padding: 0 0 12px;
     border-bottom: 1px solid rgba(214, 236, 252, 0.85);
+    flex-shrink: 0;
   }
 
-  .result-avatar-wrap {
-    grid-column: 1;
-    grid-row: 1 / -1;
-    align-self: center;
+  .result-screen-user-info {
+    flex: 1;
+    align-items: flex-start;
+    gap: 4px;
   }
 
   .result-user-name {
-    grid-column: 2;
-    grid-row: 1;
     white-space: normal;
     overflow: visible;
     text-overflow: unset;
+    font-size: 18px;
   }
 
   .result-user-birth {
-    grid-column: 2;
-    grid-row: 2;
     justify-content: flex-start;
   }
 
-  .result-appointment-datetime,
-  .result-appointment-doctor-block,
-  .result-appointment-location-block,
-  .result-appointment-branch-block {
+  .result-screen-divider {
+    display: none;
+  }
+
+  .result-appointment-carousel {
+    grid-column: 1;
+    grid-row: 2;
+    min-height: 0;
+    overflow: hidden;
+    align-items: stretch;
+  }
+
+  .result-appointment-carousel-main {
+    min-height: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  .result-appointment-body {
+    padding-bottom: 8px;
+    gap: 14px;
+  }
+
+  .result-appointment-datetime {
     flex-direction: column;
     align-items: stretch;
     padding: 14px;
   }
 
-  .result-appointment-datetime-item,
-  .result-appointment-doctor-item,
-  .result-appointment-location-item,
-  .result-appointment-branch-item {
+  .result-appointment-datetime-item {
     width: 100%;
   }
 
@@ -1335,27 +1621,59 @@ html, body {
     );
   }
 
-  .result-appointment-location-block {
-    gap: 0;
+  .result-appointment-doctor-block,
+  .result-appointment-location-block,
+  .result-appointment-branch-block {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px;
+  }
+
+  .result-appointment-doctor-item,
+  .result-appointment-location-item,
+  .result-appointment-branch-item {
+    width: 100%;
   }
 
   .result-appointment-doctor-item--specialty {
     padding-left: 0;
   }
 
-  .result-screen-divider {
-    display: none;
+  .result-appointment-location-block {
+    gap: 0;
   }
 
-  .result-appointment-carousel {
-    grid-column: 1;
-    grid-row: 2;
+  .result-appointment-doctor-block .result-appointment-datetime-rule,
+  .result-appointment-location-block .result-appointment-datetime-rule {
+    display: block;
+  }
+
+  .result-appointment-location-value,
+  .result-appointment-doctor-name,
+  .result-appointment-doctor-specialty {
+    word-break: break-word;
+  }
+
+  .result-meta-inline {
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .result-carousel-btn {
+    width: 44px;
+    height: 44px;
   }
 
   .result-actions {
     grid-row: 3;
-    margin-top: 8px;
-    padding-top: 16px;
+    grid-column: 1;
+    margin-top: 0;
+    padding-top: 12px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
   }
 
   .welcome-hero-wrap {
@@ -1394,26 +1712,25 @@ html, body {
 
   .welcome-cta {
     width: 100% !important;
-    font-size: 14px;
-    padding: 12px 14px;
-    grid-template-columns: 24px 1fr 24px;
-    gap: 8px;
+    font-size: clamp(15px, 3.8vw, 18px);
+    padding: 14px 18px;
+    grid-template-columns: 28px 1fr 28px;
+    gap: 10px;
   }
 
   .welcome-cta-icon {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
   }
 
   .welcome-cta-label {
-    white-space: nowrap;
-    font-size: 14px;
-    line-height: 1.2;
+    white-space: normal;
+    font-size: clamp(14px, 3.5vw, 17px);
   }
 
   .welcome-cta-arrows {
-    --arrow-size: 20px;
-    --arrow-overlap: 10px;
+    --arrow-size: 22px;
+    --arrow-overlap: 12px;
   }
 }
 
@@ -1422,102 +1739,138 @@ html, body {
     display: none;
   }
 
-  .screen-layout-body {
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-y: contain;
-  }
-
-  .identification-layout {
-    flex: none;
-    min-height: auto;
-    overflow: visible;
-  }
-
   .kiosk-btn {
-    padding: 14px;
-    font-size: 15px;
-  }
-
-  .kiosk-keyboard-body {
-    padding: 16px 12px;
-    justify-content: flex-start;
-    flex: none;
-    min-height: auto;
-    overflow: visible;
-  }
-
-  .kiosk-keyboard-panel {
-    height: auto;
-    overflow: visible;
-  }
-
-  .result-screen {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 0 12px;
-    padding: 14px 14px 16px;
-    border-radius: 0 0 20px 20px;
-    gap: 12px 0;
-  }
-
-  .result-appointment-meta-label {
-    white-space: normal;
-  }
-
-  .result-meta-inline {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
-  }
-
-  .result-appointment-meta-value,
-  .result-appointment-doctor-name,
-  .result-appointment-doctor-specialty {
+    padding: 16px;
     font-size: 16px;
   }
 
-  .result-appointment-location-value {
-    font-size: 15px;
-    word-break: break-word;
+  .identification-panel-title {
+    font-size: 22px;
   }
 
-  .result-appointment-carousel:has(.result-carousel-btn) {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: auto auto;
-    align-items: center;
-    column-gap: 8px;
-    row-gap: 10px;
+  .identification-layout {
+    gap: 8px;
+    padding: 10px 12px 12px;
+    --id-mobile-chrome: 400px;
+    --id-date-display: 76px;
   }
 
-  .result-appointment-carousel:has(.result-carousel-btn) .result-appointment-carousel-main {
-    grid-column: 1 / -1;
-    grid-row: 1;
+  .identification-panel {
+    flex: 0 0 auto;
+    max-height: none;
+    padding: 14px 12px;
+    gap: 18px;
   }
 
-  .result-appointment-carousel:has(.result-carousel-btn) > .result-carousel-btn:first-of-type {
-    grid-column: 1;
-    grid-row: 2;
-    justify-self: end;
+  .kiosk-keyboard-body {
+    padding: 10px;
   }
 
-  .result-appointment-carousel:has(.result-carousel-btn) > .result-carousel-btn:last-of-type {
-    grid-column: 3;
-    grid-row: 2;
-    justify-self: start;
+  .kiosk-keyboard-body .virtual-keyboard--alpha-mobile {
+    --kb-alpha-size: clamp(
+      26px,
+      min(
+        calc((100cqw - 6 * var(--kb-gap)) / 7),
+        calc((100cqh - 3 * var(--kb-gap)) / 4)
+      ),
+      50px
+    );
+    --kb-alpha-font: min(21px, calc(var(--kb-alpha-size) * 0.46));
   }
 
-  .result-appointment-carousel:has(.result-carousel-btn) .result-carousel-dots {
-    grid-column: 2;
-    grid-row: 2;
+  .kiosk-keyboard-body .virtual-keyboard--numeric {
+    --kb-numeric-size: clamp(
+      28px,
+      min(
+        calc((100cqw - 2 * var(--kb-numeric-gap, 10px)) / 3),
+        calc((100cqh - 3 * var(--kb-numeric-gap, 10px)) / 4)
+      ),
+      64px
+    );
+    --kb-numeric-gap: clamp(8px, 2vw, 12px);
+  }
+
+  .kiosk-keyboard-body .date-input {
+    --kb-numeric-size: clamp(
+      28px,
+      min(
+        calc((100cqw - 2 * var(--kb-numeric-gap, 10px)) / 3),
+        calc(
+          (
+            100cqh - var(--id-date-display) - 3 * var(--kb-numeric-gap, 10px)
+          ) / 4
+        )
+      ),
+      64px
+    );
+    --kb-numeric-gap: clamp(8px, 2vw, 12px);
+  }
+
+  .kiosk-keyboard-hint {
+    font-size: clamp(11px, 3vw, 13px);
+    line-height: 1.3;
+    padding: 0 4px;
+    flex-shrink: 0;
+  }
+
+  .identification-panel .kiosk-field {
+    padding: 16px 16px;
+    min-height: 92px;
+    border-radius: 14px;
+  }
+
+  .identification-panel .kiosk-label {
+    margin-bottom: 5px;
+    font-size: 10px;
+    letter-spacing: 1.1px;
+  }
+
+  .identification-panel .kiosk-field-value {
+    font-size: clamp(28px, 6.2vw, 34px);
+  }
+
+  .identification-field-hint {
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .identification-panel .kiosk-field-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .identification-panel .kiosk-field-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .identification-panel-actions {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .identification-panel-actions .kiosk-btn {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .virtual-keyboard--alpha-mobile .kiosk-key--alpha {
+    font-weight: 800;
+  }
+
+  .virtual-keyboard--alpha-mobile .kiosk-key--alpha-backspace {
+    margin-left: 0;
+  }
+
+  .date-input-grid {
+    width: min(
+      100%,
+      calc(3 * var(--kb-numeric-size) + 2 * var(--kb-numeric-gap))
+    );
   }
 
   .result-actions {
     flex-direction: column;
-    margin-top: 4px;
-    padding-top: 14px;
-    gap: 10px;
   }
 
   .result-actions .kiosk-btn {
@@ -1525,18 +1878,10 @@ html, body {
     width: 100%;
   }
 
-  .result-carousel-btn {
-    width: 44px;
-    height: 44px;
-  }
-
   .result-avatar-wrap {
     width: 72px;
     height: 72px;
-  }
-
-  .result-user-name {
-    font-size: 18px;
+    flex-shrink: 0;
   }
 }
 
@@ -1556,9 +1901,7 @@ html, body {
   }
 
   .kiosk-keyboard-body {
-    padding: 20px;
-    gap: 12px;
-    justify-content: flex-start;
+    padding: 10px;
   }
 
   .result-appointment-body {
@@ -1609,27 +1952,128 @@ html, body {
     white-space: normal;
   }
 
+  .kiosk-keyboard-body {
+    padding: 10px 8px;
+  }
+
+  .virtual-keyboard {
+    --kb-gap: clamp(3px, 0.9vw, 8px);
+  }
+
+  .virtual-keyboard--numeric {
+    --kb-numeric-gap: clamp(8px, 2vw, 12px);
+  }
+
+  .date-input {
+    --kb-numeric-gap: clamp(8px, 2vw, 12px);
+    gap: 8px;
+  }
+
+  .kiosk-keyboard-body .virtual-keyboard--numeric {
+    --kb-numeric-size: clamp(
+      26px,
+      min(
+        calc((100cqw - 2 * var(--kb-numeric-gap, 8px)) / 3),
+        calc((100cqh - 3 * var(--kb-numeric-gap, 8px)) / 4)
+      ),
+      54px
+    );
+  }
+
+  .kiosk-keyboard-body .date-input {
+    --kb-numeric-size: clamp(
+      26px,
+      min(
+        calc((100cqw - 2 * var(--kb-numeric-gap, 8px)) / 3),
+        calc(
+          (
+            100cqh - var(--id-date-display, 64px) - 3 * var(--kb-numeric-gap, 8px)
+          ) / 4
+        )
+      ),
+      54px
+    );
+  }
+
+  .date-input-display.kiosk-field {
+    padding: 10px 14px;
+  }
+
   .identification-layout {
-    padding: 10px 12px;
-    gap: 12px;
-    flex: none;
-    min-height: auto;
-    overflow: visible;
+    gap: 8px;
+    padding: 8px 10px 10px;
+    --id-mobile-chrome: 430px;
+    --id-date-display: 64px;
   }
 
   .identification-panel {
-    padding: 14px 12px;
-    gap: 10px;
+    flex: 0 0 auto;
+    max-height: none;
+    padding: 11px 10px;
+    gap: 16px;
+  }
+
+  .kiosk-keyboard-body .virtual-keyboard--alpha-mobile {
+    --kb-alpha-font: min(19px, calc(var(--kb-alpha-size) * 0.46));
+  }
+
+  .identification-panel-title {
+    font-size: 19px;
+  }
+
+  .identification-panel .kiosk-field {
+    padding: 14px 14px;
+    min-height: 84px;
+    border-radius: 12px;
+  }
+
+  .identification-panel .kiosk-label {
+    margin-bottom: 4px;
+    font-size: 9px;
+    letter-spacing: 0.9px;
+  }
+
+  .identification-panel .kiosk-field-value {
+    font-size: clamp(26px, 6.8vw, 32px);
+    letter-spacing: 0.03em;
+  }
+
+  .identification-field-hint {
+    font-size: 11px;
+  }
+
+  .identification-panel .kiosk-field-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .identification-panel .kiosk-field-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .identification-panel-actions .kiosk-btn {
+    padding: 13px;
+    font-size: 15px;
+  }
+
+  .virtual-keyboard--alpha-mobile .kiosk-key--alpha {
+    font-weight: 800;
+  }
+
+  .date-input-grid {
+    width: min(
+      100%,
+      calc(3 * var(--kb-numeric-size) + 2 * var(--kb-numeric-gap))
+    );
   }
 
   .result-screen {
-    padding: 12px 12px 14px;
-    border-radius: 0 0 16px 16px;
-  }
-
-  .result-screen-user {
-    gap: 4px 10px;
-    padding-bottom: 10px;
+    width: calc(100% - 16px);
+    max-width: calc(100% - 16px);
+    margin: 6px auto 8px;
+    padding: 14px 12px;
+    border-radius: 18px;
   }
 
   .result-avatar-wrap {
@@ -1639,129 +2083,5 @@ html, body {
 
   .result-user-name {
     font-size: 16px;
-  }
-
-  .result-user-birth-label,
-  .result-appointment-meta-label {
-    font-size: 11px;
-  }
-
-  .result-user-birth-value {
-    font-size: 14px;
-  }
-
-  .result-appointment-body {
-    gap: 12px;
-    padding: 0;
-  }
-
-  .result-appointment-datetime,
-  .result-appointment-doctor-block,
-  .result-appointment-location-block,
-  .result-appointment-branch-block {
-    padding: 12px;
-    border-radius: 12px;
-  }
-
-  .result-appointment-datetime-item,
-  .result-appointment-doctor-item,
-  .result-appointment-location-item,
-  .result-appointment-branch-item {
-    gap: 10px;
-  }
-
-  .result-appointment-doctor-icon {
-    width: 44px;
-    height: 44px;
-  }
-
-  .result-appointment-location-icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  .result-appointment-meta-value,
-  .result-appointment-doctor-name,
-  .result-appointment-doctor-specialty,
-  .result-appointment-location-value {
-    font-size: 14px;
-  }
-
-  .result-actions {
-    gap: 8px;
-    padding-top: 12px;
-  }
-
-  .result-actions .kiosk-btn {
-    padding: 14px;
-    font-size: 15px;
-  }
-
-  .kiosk-keyboard-frame {
-    flex: none;
-    min-height: auto;
-  }
-
-  .kiosk-keyboard-panel {
-    height: auto;
-    overflow: visible;
-  }
-
-  .kiosk-keyboard-body {
-    padding: 14px 12px;
-    gap: 10px;
-    justify-content: flex-start;
-    flex: none;
-    min-height: auto;
-    overflow: visible;
-  }
-
-  .kiosk-keyboard-hint {
-    display: none;
-  }
-
-  .date-input {
-    gap: 8px;
-    max-width: 100%;
-  }
-
-  .date-input-display {
-    padding: 10px 12px;
-  }
-
-  .date-input-display .kiosk-field-value--compact {
-    font-size: clamp(18px, 5vw, 22px);
-  }
-
-  .date-input-grid {
-    gap: 5px;
-  }
-
-  .date-input-grid .kiosk-key--numeric {
-    height: clamp(34px, 8.5vw, 42px);
-    font-size: clamp(14px, 3.5vw, 17px);
-  }
-
-  .date-input-clear {
-    height: clamp(34px, 8.5vw, 40px);
-    width: clamp(100px, 32vw, 130px);
-    margin-top: 0;
-  }
-
-  .kiosk-key--alpha {
-    height: clamp(28px, 7vw, 40px);
-    font-size: clamp(10px, 2.6vw, 14px);
-  }
-
-  .kiosk-key--alpha-backspace {
-    height: clamp(28px, 7vw, 40px);
-  }
-
-  .virtual-keyboard {
-    gap: 6px;
-  }
-
-  .virtual-keyboard-row {
-    gap: 3px;
   }
 }

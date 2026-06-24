@@ -68,7 +68,7 @@ export default function IdentificationScreen({ onSearch, onBack }: Identificatio
           >
             <div className="kiosk-field-row">
               <div className="kiosk-field-content">
-                <div className="kiosk-label" style={{ marginBottom: '8px' }}>3 premières lettres du nom</div>
+                <div className="kiosk-label">3 premières lettres du nom</div>
                 <div className="kiosk-field-value" style={{
                   color: namePrefix ? BRAND.navy : BRAND.placeholder,
                 }}>
@@ -77,7 +77,7 @@ export default function IdentificationScreen({ onSearch, onBack }: Identificatio
                 <div className="identification-field-hint">Exemple : DUP pour DUPONT</div>
               </div>
               <div className="liquid-glass-icon kiosk-field-icon">
-                <User size={24} strokeWidth={1.75} color={BRAND.blue} />
+                <User size={28} strokeWidth={1.75} color={BRAND.blue} />
               </div>
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function IdentificationScreen({ onSearch, onBack }: Identificatio
           >
             <div className="kiosk-field-row">
               <div className="kiosk-field-content">
-                <div className="kiosk-label" style={{ marginBottom: '8px' }}>Date de naissance</div>
+                <div className="kiosk-label">Date de naissance</div>
                 <div className="kiosk-field-value" style={{
                   color: birthDate ? BRAND.navy : BRAND.placeholder,
                 }}>
@@ -96,7 +96,7 @@ export default function IdentificationScreen({ onSearch, onBack }: Identificatio
                 </div>
               </div>
               <div className="liquid-glass-icon kiosk-field-icon">
-                <Calendar size={24} strokeWidth={1.75} color={BRAND.blue} />
+                <Calendar size={28} strokeWidth={1.75} color={BRAND.blue} />
               </div>
             </div>
           </div>

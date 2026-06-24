@@ -68,15 +68,18 @@ export default function DateInput({ value, onChange }: DateInputProps) {
         {['7','8','9','4','5','6','1','2','3'].map(d => (
           <button key={d} type="button" className="kiosk-key kiosk-key--numeric" onPointerDown={(e) => { e.preventDefault(); press(d); }}>{d}</button>
         ))}
-        <div />
+        <div className="date-input-grid-spacer" aria-hidden />
         <button type="button" className="kiosk-key kiosk-key--numeric" onPointerDown={(e) => { e.preventDefault(); press('0'); }}>0</button>
-        <div />
+        <button
+          type="button"
+          className="kiosk-key kiosk-key--numeric kiosk-key--numeric-inline-backspace"
+          aria-label="Effacer"
+          onPointerDown={(e) => { e.preventDefault(); backspace(); }}
+          style={{ color: BRAND.blue }}
+        >
+          <Delete size={22} />
+        </button>
       </div>
-
-      <button type="button" className="kiosk-key kiosk-key--numeric-backspace date-input-clear" onPointerDown={(e) => { e.preventDefault(); backspace(); }}
-        style={{ color: BRAND.blue, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', fontSize: '15px' }}>
-        <Delete size={18} /> Effacer
-      </button>
     </div>
   );
 }

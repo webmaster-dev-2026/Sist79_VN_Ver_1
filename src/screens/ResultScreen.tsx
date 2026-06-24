@@ -55,13 +55,15 @@ export default function ResultScreen({ appointment, onHome, onBack }: ResultScre
           <div className="result-avatar-wrap">
             <EmptyAvatar size={88} />
           </div>
-          <h3 className="result-user-name">
-            {appointment.firstName}{' '}
-            <span className="welcome-title-accent">{appointment.lastName}</span>
-          </h3>
-          <div className="result-user-birth">
-            <span className="result-user-birth-label">Date de naissance</span>
-            <span className="result-user-birth-value">{appointment.birthDate}</span>
+          <div className="result-screen-user-info">
+            <h3 className="result-user-name">
+              {appointment.firstName}{' '}
+              <span className="welcome-title-accent">{appointment.lastName}</span>
+            </h3>
+            <div className="result-user-birth">
+              <span className="result-user-birth-label">Date de naissance</span>
+              <span className="result-user-birth-value">{appointment.birthDate}</span>
+            </div>
           </div>
         </div>
 
@@ -87,16 +89,16 @@ export default function ResultScreen({ appointment, onHome, onBack }: ResultScre
               <div className="result-appointment-datetime">
                 <div className="result-appointment-datetime-item">
                   <CalendarDays size={22} strokeWidth={1.75} color={BRAND.blue} />
-                  <div className="result-meta-inline">
-                    <span className="result-appointment-meta-label">Date</span>
+                  <div className="result-appointment-datetime-content">
+                    <span className="result-appointment-meta-label">Date du rendez-vous</span>
                     <span className="result-appointment-meta-value">{apt.date}</span>
                   </div>
                 </div>
                 <div className="result-appointment-datetime-rule" aria-hidden />
                 <div className="result-appointment-datetime-item">
                   <Clock size={22} strokeWidth={1.75} color={BRAND.blue} />
-                  <div className="result-meta-inline">
-                    <span className="result-appointment-meta-label">Heure</span>
+                  <div className="result-appointment-datetime-content">
+                    <span className="result-appointment-meta-label">Heure du rendez-vous</span>
                     <span className="result-appointment-meta-value">{apt.time}</span>
                   </div>
                 </div>
